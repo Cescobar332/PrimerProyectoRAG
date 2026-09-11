@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from google.genai import types
 import chromadb
 import os
+from fastapi.staticfiles import StaticFiles
 
 load_dotenv()
 historial: list[types.Content] = []
@@ -19,7 +20,7 @@ class Mensaje(BaseModel):
 
 UMBRAL_RELEVANCIA = 0.65
 
-def buscar_contexto(pregunta_usuario, n_resultados = 3):
+def buscar_contexto(pregunta_usuario, n_resultados = 6):
     coleccion = cliente_chroma.get_collection(name="libros_historia")
     
     resultado_query = client.models.embed_content(
@@ -99,3 +100,5 @@ def chat(mensaje: Mensaje):
         "respuesta": respuesta.text,
         "fuentes": fuentes_unicas
     }
+
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
