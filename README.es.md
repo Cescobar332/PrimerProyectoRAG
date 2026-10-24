@@ -6,7 +6,7 @@ API construida con FastAPI, con interfaz web, que permite hacer preguntas en len
 
 Proyecto de portafolio construido para demostrar habilidades de **AI Engineering**: integración de LLMs vía API, diseño de pipelines de RAG (Retrieval-Augmented Generation), manejo de bases de datos vectoriales, y decisiones de ingeniería tomadas y validadas con datos reales, no solo copiadas de un tutorial.
 
-> **Estado actual:** carga del corpus completada — 48 de 50 libros objetivo indexados. Consulta la sección [Estado del corpus](#estado-del-corpus) para más detalle.
+> **Estado actual:** carga del corpus completada — 47 indexados. Consulta la sección [Estado del corpus](#estado-del-corpus) para más detalle.
 
 ---
 
@@ -120,7 +120,7 @@ La ingesta aísla la lectura de cada PDF en su propio manejo de errores: un arch
 
 ## Estado del corpus
 
-**48 libros cargados** (2 de una meta inicial de 50 quedaron descartados por corrupción del archivo — uno de los PDFs estaba truncado de forma irreparable, incluso con herramientas especializadas como `qpdf`; esto queda registrado automáticamente por el script de ingesta, no se descarta en silencio). El corpus cubre historia colombiana y latinoamericana, además de varias referencias de historia universal.
+**47 libros cargados**, de una meta inicial de 50: 2 se descartaron por corrupción del archivo (uno de los PDFs estaba truncado de forma irreparable, incluso con herramientas especializadas como `qpdf`; esto queda registrado automáticamente por el script de ingesta, no se descarta en silencio), y 1 se eliminó por ser una copia idéntica de otro libro. Desde entonces, la ingesta compara el hash SHA-256 de cada PDF para impedir que se indexe un duplicado. El corpus cubre historia colombiana y latinoamericana, además de varias referencias de historia universal.
 
 **Limitación conocida:** algunos libros incluyen resúmenes o fragmentos en otros idiomas (ej. catalán, en documentos académicos con resumen multilingüe). Los embeddings de Gemini son multilingües y manejan esto razonablemente bien, pero no se implementó filtrado por idioma — queda documentado como mejora futura, no como defecto oculto.
 
@@ -203,7 +203,7 @@ curl -X POST http://127.0.0.1:8000/chat \
 - [x] Interfaz web mínima (HTML/CSS/JS servida por FastAPI)
 - [x] Evaluación formal de recuperación, abstención y fidelidad
 - [ ] Mejorar la extracción de PDF (dígitos separados por espacios, como `1 9 0 7`)
-- [ ] Eliminar un libro indexado dos veces (`historia-universal-contemporanea-...-14097 (1).pdf`)
+- [x] Eliminar un libro indexado dos veces (`historia-universal-contemporanea-...-14097 (1).pdf`)
 - [ ] Repetir la evaluación varias veces y reportar el rango, no una sola corrida
 - [ ] Ampliar el banco de evaluación con preguntas parafraseadas
 - [ ] Sesiones de conversación por usuario (actualmente el historial es global, adecuado para demo de un solo usuario)

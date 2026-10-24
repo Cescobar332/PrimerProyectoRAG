@@ -6,7 +6,7 @@ A FastAPI application with a web interface that answers natural-language questio
 
 Portfolio project built to demonstrate **AI Engineering** skills: integrating LLMs via API, designing RAG (Retrieval-Augmented Generation) pipelines, working with vector databases, and making engineering decisions that were validated with real data rather than copied from a tutorial.
 
-> **Current status:** corpus loading complete — 48 of 50 target books indexed. See [Corpus status](#corpus-status) for details.
+> **Current status:** corpus loading complete — 47 books indexed. See [Corpus status](#corpus-status) for details.
 
 ---
 
@@ -121,7 +121,7 @@ Ingestion isolates each PDF's reading step in its own error handling: a corrupte
 
 ## Corpus status
 
-**48 books loaded** (2 out of an initial target of 50 were discarded due to file corruption — one PDF was truncated beyond repair, even with specialized tools like `qpdf`; this is logged automatically by the ingestion script rather than silently skipped). Corpus covers Colombian and Latin American history, plus several general world history references.
+**47 books loaded**, out of an initial target of 50: 2 were discarded due to file corruption (one PDF was truncated beyond repair, even with specialized tools like `qpdf`; this is logged automatically by the ingestion script rather than silently skipped), and 1 was removed because it was an identical copy of another book. Ingestion now compares each PDF's SHA-256 hash to prevent duplicates from being indexed. Corpus covers Colombian and Latin American history, plus several general world history references.
 
 **Known limitation:** some books include summaries or excerpts in other languages (e.g. Catalan, in academic documents with multilingual abstracts). Gemini's embeddings are multilingual and handle this reasonably well, but no language filtering was implemented — this is documented as a future improvement, not a hidden defect.
 
@@ -206,7 +206,7 @@ curl -X POST http://127.0.0.1:8000/chat \
 - [x] Minimal web interface (HTML/CSS/JS served by FastAPI)
 - [x] Formal evaluation of retrieval, refusal and faithfulness
 - [ ] Improve PDF extraction (digits split by spaces, like `1 9 0 7`)
-- [ ] Remove a book indexed twice (`historia-universal-contemporanea-...-14097 (1).pdf`)
+- [x] Remove a book indexed twice (`historia-universal-contemporanea-...-14097 (1).pdf`)
 - [ ] Repeat the evaluation several times and report the range, not a single run
 - [ ] Extend the evaluation set with paraphrased questions
 - [ ] Per-user conversation sessions (history is currently global, appropriate for a single-user demo)
