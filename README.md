@@ -2,11 +2,47 @@
 
 # RAG over Colombian and Latin American History
 
-A FastAPI application that answers natural-language questions over a corpus of history books (primarily Colombian and Latin American), using an LLM to generate answers grounded exclusively in the actual content of those books — with guaranteed source citation and explicit handling of cases where the system lacks sufficient information to answer.
+A FastAPI application with a web interface that answers natural-language questions over a corpus of history books (primarily Colombian and Latin American), using an LLM to generate answers grounded exclusively in the actual content of those books — with guaranteed source citation and explicit handling of cases where the system lacks sufficient information to answer.
 
 Portfolio project built to demonstrate **AI Engineering** skills: integrating LLMs via API, designing RAG (Retrieval-Augmented Generation) pipelines, working with vector databases, and making engineering decisions that were validated with real data rather than copied from a tutorial.
 
 > **Current status:** corpus loading complete — 48 of 50 target books indexed. See [Corpus status](#corpus-status) for details.
+
+---
+
+## System evaluation
+
+Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval/preguntas.jsonl)) and a reproducible script ([`eval/evaluar.py`](eval/evaluar.py)). Per-question details, including the generated answer and the judge's reasoning, are in [`eval/resultados.json`](eval/resultados.json). *(Questions and answers are in Spanish, matching the corpus.)*
+
+| Metric | What it measures | Result |
+|---|---|---|
+| Retrieval: correct book in top-k | Hit@6 before the threshold | 18/18 (100.0%) |
+| Retrieval after threshold | Hit@6 after the threshold (0.65) | 18/18 (100.0%) |
+| Answers what the corpus covers | Answerable questions not refused | 17/18 (94.4%) |
+| Answers fully | Answerable questions with a complete (not partial) answer | 16/18 (88.9%) |
+| Refuses what the corpus doesn't cover | Out-of-corpus questions correctly refused | 12/12 (100.0%) |
+| Faithfulness to context | Answers with no claims outside the retrieved context (judge: gemini-flash-latest) | 16/17 (94.1%) |
+
+### How it was measured
+
+- **New questions, not the calibration ones.** The relevance threshold (0.65) was calibrated with a different question set ([`validar_umbral.py`](validar_umbral.py)). Using those same questions to measure it would inflate the results (*data leakage*), so this set is independent.
+- **18 answerable questions and 12 near-miss negatives.** Each answerable question is labeled with the book that contains the answer. The negatives are about Latin American history but cover topics the corpus doesn't (e.g. the El Mozote massacre or the Caracazo), verified by searching for those terms in the indexed text. An obviously off-topic question like "what is the capital of Japan?" tests nothing.
+- **Retrieval:** Hit@6, i.e. whether the expected book appears among the 6 retrieved chunks, measured before and after applying the threshold.
+- **Generation:** an LLM judge (`gemini-flash-latest`, separate from and more capable than the `gemini-flash-lite-latest` generator) classifies each answer as complete, partial or refusal, and decides whether every claim is supported by the retrieved context. It uses structured output with a Pydantic schema and `temperature=0`. Judge verdicts on failed cases were reviewed manually.
+
+### Findings
+
+- **An answer that cites the right source can still say the opposite of what that source says (`par-01`).** One book mentions the Convivir as an example of governments officially sponsoring paramilitarism. The model wrote that the Convivir were created "to fight paramilitarism", citing that same book. The `fuentes` field was correct and the content wasn't. That is why faithfulness is measured separately from citation.
+- **PDF extraction broke a fact that was actually in the corpus (`emp-01`).** Coltejer's founding date appears in Carlos Dávila's book, but pypdf extracted it as `1 9 0 7`. The system couldn't find it and answered that it didn't have the information. This is a data-quality problem in ingestion, not a model or threshold problem, and it only surfaced through evaluation.
+- **The threshold works with a narrow margin, and the prompt acts as a second layer.** The farthest answerable question landed at distance 0.587 and the closest negative at 0.605. That negative (about Iván Duque's presidency) passed the threshold with all 6 chunks and was refused by the LLM, following the instruction to say when the context doesn't contain the answer. The threshold filtered out the other 11 negatives. The threshold was not retuned on these results, to avoid contaminating the evaluation.
+- **Honest partial answers (`ind-01`).** When the context covers only part of the question, the model answers what it can and states explicitly what's missing, instead of filling the gap with its own knowledge.
+
+### Limitations
+
+- **A single run with a non-deterministic generator.** The generator uses the default temperature, and across runs during development the answers to the same question changed. Results may vary by one or two cases between runs.
+- **Small sample.** With 18 answerable questions, each one is worth about 5.5 percentage points. That's why results are shown as n/total.
+- **Questions are probably easy for the retriever.** The answerable questions were written from the books' text and share vocabulary with it, which favors the 18/18 Hit@6. Paraphrased questions are still missing.
+- **The judge may be lenient.** Manual review found cases where the judge accepted mild inferences by the model as faithful, so the faithfulness metric is probably optimistic.
 
 ---
 
@@ -132,7 +168,17 @@ The script is safe to interrupt and resume — it respects the free daily API qu
 uvicorn app.main:app --reload
 ```
 
-Interactive docs available at `http://127.0.0.1:8000/docs`.
+The web interface is available at `http://127.0.0.1:8000/` and the interactive docs at `http://127.0.0.1:8000/docs`.
+
+### Run the evaluation
+
+From the project root:
+
+```powershell
+python -m eval.evaluar
+```
+
+This writes `eval/resultados.json` and `eval/resultados.md`. Each evaluated question is saved to `eval/cache.jsonl`, so if the run is interrupted by quota limits, running it again picks up where it left off. If you change the threshold, the question set or the judge prompt, the affected cache entries are invalidated automatically.
 
 ### Example usage
 
@@ -157,7 +203,12 @@ curl -X POST http://127.0.0.1:8000/chat \
 
 - [ ] Recalibrate the relevance threshold periodically if new books are added
 - [ ] Per-chunk language detection/filtering
-- [ ] Minimal frontend (decision pending)
+- [x] Minimal web interface (HTML/CSS/JS served by FastAPI)
+- [x] Formal evaluation of retrieval, refusal and faithfulness
+- [ ] Improve PDF extraction (digits split by spaces, like `1 9 0 7`)
+- [ ] Remove a book indexed twice (`historia-universal-contemporanea-...-14097 (1).pdf`)
+- [ ] Repeat the evaluation several times and report the range, not a single run
+- [ ] Extend the evaluation set with paraphrased questions
 - [ ] Per-user conversation sessions (history is currently global, appropriate for a single-user demo)
 
 ---

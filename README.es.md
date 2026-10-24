@@ -2,7 +2,7 @@
 
 # RAG sobre Historia Colombiana y Latinoamericana
 
-API construida con FastAPI que permite hacer preguntas en lenguaje natural sobre un corpus de libros de historia (principalmente colombiana y latinoamericana) y recibe respuestas generadas por un LLM, fundamentadas exclusivamente en el contenido real de esos libros — con citación de fuentes garantizada y manejo explícito de los casos donde el sistema no tiene información suficiente para responder.
+API construida con FastAPI, con interfaz web, que permite hacer preguntas en lenguaje natural sobre un corpus de libros de historia (principalmente colombiana y latinoamericana) y recibe respuestas generadas por un LLM, fundamentadas exclusivamente en el contenido real de esos libros — con citación de fuentes garantizada y manejo explícito de los casos donde el sistema no tiene información suficiente para responder.
 
 Proyecto de portafolio construido para demostrar habilidades de **AI Engineering**: integración de LLMs vía API, diseño de pipelines de RAG (Retrieval-Augmented Generation), manejo de bases de datos vectoriales, y decisiones de ingeniería tomadas y validadas con datos reales, no solo copiadas de un tutorial.
 
@@ -10,6 +10,41 @@ Proyecto de portafolio construido para demostrar habilidades de **AI Engineering
 
 ---
 
+## Evaluación del sistema
+
+Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](eval/preguntas.jsonl)) y un script reproducible ([`eval/evaluar.py`](eval/evaluar.py)). El detalle por pregunta, con la respuesta generada y la justificación del juez, está en [`eval/resultados.json`](eval/resultados.json).
+
+| Métrica | Qué mide | Resultado |
+|---|---|---|
+| Recuperación: libro correcto en top-k | Hit@6 antes del umbral | 18/18 (100.0%) |
+| Recuperación tras umbral | Hit@6 después del umbral (0.65) | 18/18 (100.0%) |
+| Responde lo que el corpus cubre | Preguntas respondibles no rechazadas | 17/18 (94.4%) |
+| Responde por completo | Preguntas respondibles con respuesta completa (no parcial) | 16/18 (88.9%) |
+| Rechaza lo que el corpus no cubre | Preguntas fuera del corpus con abstención | 12/12 (100.0%) |
+| Fidelidad al contexto | Respuestas sin afirmaciones fuera del contexto (juez: gemini-flash-latest) | 16/17 (94.1%) |
+
+### ¿Cómo se midió?
+
+- **Preguntas nuevas, no las de calibración.** El umbral de relevancia (0.65) se calibró con otro conjunto de preguntas ([`validar_umbral.py`](validar_umbral.py)). Usar esas mismas preguntas para medirlo inflaría los resultados (*data leakage*), así que este banco es independiente.
+- **18 preguntas respondibles y 12 negativas cercanas.** Cada respondible tiene anotado el libro donde está la respuesta. Las negativas son de historia latinoamericana pero sobre temas que el corpus no cubre (por ejemplo, la masacre de El Mozote o el Caracazo), verificado buscando esos términos en el texto indexado. Una pregunta obviamente ajena, como "¿cuál es la capital de Japón?", no pone a prueba nada.
+- **Recuperación:** Hit@6, es decir, si el libro esperado aparece entre los 6 fragmentos recuperados, medido antes y después de aplicar el umbral.
+- **Generación:** un LLM juez (`gemini-flash-latest`, distinto y más capaz que el generador `gemini-flash-lite-latest`) clasifica cada respuesta como completa, parcial o abstención, y decide si todas sus afirmaciones están respaldadas por el contexto recuperado. Usa salida estructurada con esquema Pydantic y `temperature=0`. Los veredictos de los casos fallidos se revisaron manualmente.
+
+### Hallazgos
+
+- **Una respuesta con la fuente bien citada puede afirmar lo contrario de lo que dice esa fuente (`par-01`).** Uno de los libros menciona las Convivir como ejemplo de gobiernos que llegaron a auspiciar oficialmente el paramilitarismo. El modelo escribió que las Convivir se crearon "para enfrentar el paramilitarismo", citando ese mismo libro. El campo `fuentes` era correcto y el contenido no. Por eso la fidelidad se mide aparte de la citación.
+- **La extracción del PDF rompió un dato que sí estaba en el corpus (`emp-01`).** La fecha de fundación de Coltejer aparece en el libro de Carlos Dávila, pero pypdf la extrajo como `1 9 0 7`. El sistema no la encontró y respondió que no tenía la información. Es un problema de calidad de datos en la ingesta, no del modelo ni del umbral, y solo apareció al evaluar.
+- **El umbral funciona con poco margen, y el prompt actúa como segunda capa.** La pregunta respondible con mayor distancia quedó en 0.587 y la negativa más cercana en 0.605. Esa negativa (sobre el gobierno de Iván Duque) pasó el umbral con sus 6 fragmentos y la rechazó el LLM, siguiendo la instrucción de decir cuando el contexto no contiene la respuesta. Las otras 11 negativas las descartó el umbral. El umbral no se reajustó con estos resultados, para no contaminar la evaluación.
+- **Respuestas parciales honestas (`ind-01`).** Cuando el contexto cubre solo una parte de la pregunta, el modelo responde lo que tiene y dice explícitamente qué le falta, en vez de completar con conocimiento propio.
+
+### Limitaciones
+
+- **Una sola corrida con un generador no determinista.** El generador usa la temperatura por defecto y, entre corridas hechas durante el desarrollo, las respuestas a una misma pregunta cambiaron. Los resultados pueden variar en uno o dos casos entre ejecuciones.
+- **Muestra pequeña.** Con 18 preguntas respondibles, cada una vale unos 5.5 puntos porcentuales. Por eso los resultados se muestran como n/total.
+- **Preguntas probablemente fáciles para el retriever.** Las respondibles se escribieron a partir del texto de los libros y comparten vocabulario con él, lo que favorece el 18/18 en Hit@6. Faltan preguntas parafraseadas.
+- **Juez posiblemente indulgente.** En la revisión manual se encontraron casos donde el juez aceptó como fieles inferencias leves del modelo, así que la métrica de fidelidad probablemente es optimista.
+
+---
 ## Por qué este proyecto
 
 Como ingeniero de sistemas recién graduado con experiencia en desarrollo backend (Laravel, .NET), busqué un proyecto que jugara a favor de esa base — construir software, no entrenar modelos desde cero — mientras demuestra la capa de habilidades que el mercado actual de **AI Engineer** realmente pide: integrar modelos de lenguaje ya existentes en aplicaciones reales, mediante APIs, bases de datos vectoriales y arquitecturas de recuperación de información.
@@ -132,7 +167,17 @@ El script es seguro de interrumpir y reanudar — respeta la cuota diaria gratui
 uvicorn app.main:app --reload
 ```
 
-Documentación interactiva disponible en `http://127.0.0.1:8000/docs`.
+La interfaz web queda disponible en `http://127.0.0.1:8000/` y la documentación interactiva en `http://127.0.0.1:8000/docs`.
+
+### Ejecutar la evaluación
+
+Desde la raíz del proyecto:
+
+```powershell
+python -m eval.evaluar
+```
+
+Genera `eval/resultados.json` y `eval/resultados.md`. Cada pregunta evaluada se guarda en `eval/cache.jsonl`: si la ejecución se interrumpe por cuota, al volver a correrla continúa donde quedó. Si cambias el umbral, el banco de preguntas o el prompt del juez, esas entradas del caché se invalidan solas.
 
 ### Ejemplo de uso
 
@@ -155,7 +200,12 @@ curl -X POST http://127.0.0.1:8000/chat \
 
 - [ ] Recalibrar el umbral de relevancia periódicamente si se agregan más libros
 - [ ] Filtrado o detección de idioma por chunk
-- [ ] Frontend mínimo (decisión pendiente)
+- [x] Interfaz web mínima (HTML/CSS/JS servida por FastAPI)
+- [x] Evaluación formal de recuperación, abstención y fidelidad
+- [ ] Mejorar la extracción de PDF (dígitos separados por espacios, como `1 9 0 7`)
+- [ ] Eliminar un libro indexado dos veces (`historia-universal-contemporanea-...-14097 (1).pdf`)
+- [ ] Repetir la evaluación varias veces y reportar el rango, no una sola corrida
+- [ ] Ampliar el banco de evaluación con preguntas parafraseadas
 - [ ] Sesiones de conversación por usuario (actualmente el historial es global, adecuado para demo de un solo usuario)
 
 ---
