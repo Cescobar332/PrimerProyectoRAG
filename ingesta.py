@@ -7,6 +7,7 @@ import chromadb
 import time
 import json
 import logging
+import hashlib
 
 logging.disable(logging.WARNING)
 
@@ -56,8 +57,22 @@ def guardar_en_registro(nombre_archivo):
     with open(archivo_registro, "w") as f:
         json.dump(registro, f)
 
+def calcular_hash(ruta):
+    sha = hashlib.sha256()
+    with open(ruta, "rb") as f:
+        for bloque in iter(lambda: f.read(1024 * 1024), b""):
+            sha.update(bloque)
+    return sha.hexdigest()
+
 libros_ya_procesados = cargar_registro()
 carpeta_libros = "libros"
+
+hashes_vistos = {}
+for nombre in libros_ya_procesados:
+    ruta = os.path.join(carpeta_libros, nombre)
+    if os.path.exists(ruta):
+        hashes_vistos[calcular_hash(ruta)] = nombre
+
 for nombre_archivo in os.listdir(carpeta_libros):
     if not nombre_archivo.endswith(".pdf"):
         continue
@@ -67,6 +82,12 @@ for nombre_archivo in os.listdir(carpeta_libros):
         continue
 
     ruta_completa = os.path.join(carpeta_libros, nombre_archivo)
+
+    hash_archivo = calcular_hash(ruta_completa)
+    if hash_archivo in hashes_vistos:
+        print(f"Omitido (duplicado de '{hashes_vistos[hash_archivo]}'): {nombre_archivo}")
+        continue
+    hashes_vistos[hash_archivo] = nombre_archivo
 
     try: 
         lector = PdfReader(ruta_completa)
