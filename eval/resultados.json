@@ -1,0 +1,1344 @@
+{
+  "fecha": "2026-10-24T12:51:34",
+  "configuracion": {
+    "umbral_relevancia": 0.65,
+    "n_resultados": 6,
+    "modelo_juez": "gemini-flash-latest",
+    "total_preguntas": 30
+  },
+  "metricas": {
+    "hit_crudo": {
+      "aciertos": 18,
+      "total": 18,
+      "porcentaje": 100.0
+    },
+    "hit_filtrado": {
+      "aciertos": 18,
+      "total": 18,
+      "porcentaje": 100.0
+    },
+    "responde_respondibles": {
+      "aciertos": 17,
+      "total": 18,
+      "porcentaje": 94.4
+    },
+    "responde_completo": {
+      "aciertos": 16,
+      "total": 18,
+      "porcentaje": 88.9
+    },
+    "rechaza_no_respondibles": {
+      "aciertos": 12,
+      "total": 12,
+      "porcentaje": 100.0
+    },
+    "fidelidad": {
+      "aciertos": 16,
+      "total": 17,
+      "porcentaje": 94.1
+    }
+  },
+  "preguntas": [
+    {
+      "id": "m19-01",
+      "pregunta": "¿Por qué Carlos Pizarro dejó las armas?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.493
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.4942
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5117
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5187
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5194
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5248
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el contexto proporcionado, Carlos Pizarro dejó las armas porque él y los militantes del M-19 llegaron a entender que la lucha armada ya no era la vía (tras haber revaluado las arcaicas concepciones de la misma), tomando la posición en favor de los acuerdos de paz. Esto condujo a la decisión del Secretariado General y de su último comandante, Carlos Pizarro Leóngomez, de realizar la dejación de las armas, la reintegración a la vida civil y constituirse en un movimiento político legal (\"Por Colombia, por la paz, dejad las armas\"). \n\nEsta información proviene del libro: *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde de forma completa a la pregunta y todas sus afirmaciones están respaldadas fielmente por los fragmentos del contexto provisto.",
+      "abstencion_correcta": true,
+      "clave": "m19-01:5c8455438706"
+    },
+    {
+      "id": "m19-02",
+      "pregunta": "¿Cuántos votos obtuvo Antonio Navarro Wolff por la Alianza Democrática M-19 en las elecciones presidenciales de 1990?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5077
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5388
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5507
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5674
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5686
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5721
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Según el libro *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*, Antonio Navarro (como candidato de la Alianza Democrática M-19) obtuvo **754.740** votos en las elecciones presidenciales de 1990.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde con precisión la pregunta y la cifra de 754.740 votos está textualmente respaldada en la tabla electoral del contexto.",
+      "abstencion_correcta": true,
+      "clave": "m19-02:02094390673a"
+    },
+    {
+      "id": "eco-01",
+      "pregunta": "¿Qué efectos tuvo la bonanza cafetera de 1976-1979 sobre la economía colombiana y la tasa de cambio?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.4993
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.5034
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.5367
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.5452
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.5539
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.566
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el contexto proporcionado, la bonanza cafetera de 1976-1979 tuvo los siguientes efectos:\n\n* Estuvo acompañada de un alto endeudamiento externo de la administración Turbay.\n* Fue una fase en contra dentro de un periodo que, en general, se caracterizó por ser de cuasi permanente devaluación real del peso colombiano.\n\nEsta información proviene del libro *Breve historia económica de Colombia* de Salomón Kalmanovitz (`breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf`).",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta aborda los efectos sobre la economía y la tasa de cambio según el contexto provisto, y todas sus afirmaciones están estrictamente respaldadas por el texto.",
+      "abstencion_correcta": true,
+      "clave": "eco-01:81415daa8129"
+    },
+    {
+      "id": "emp-01",
+      "pregunta": "¿Cuándo se fundó Coltejer y cómo logró sortear la crisis de los años treinta?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.5633
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.6061
+        },
+        {
+          "libro": "empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf",
+          "distancia": 0.6137
+        },
+        {
+          "libro": "empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf",
+          "distancia": 0.6187
+        },
+        {
+          "libro": "empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf",
+          "distancia": 0.6314
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.633
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en los textos proporcionados, el contexto **no contiene** la respuesta completa a tu pregunta:\n\n* El texto *breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf* menciona a **Coltejer** como una importante compañía manufacturera cuyos capitales iniciales se originaron en la producción y comercialización del café, pero no indica cuándo fue fundada ni cómo sorteó la crisis de los años treinta.\n* El texto *empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf* menciona la fundación de otra empresa textil (*Tejidos El Cóndor, Tejicóndor*) el 3 de abril de 1934 para competir con las ya consolidadas **Coltejer** y Fabricato, y también señala de forma general que algunas empresas sortearon la crisis recurriendo a créditos y a una campaña publicitaria/proteccionista (*“Abecedario económico del colombiano”*), pero **no** especifica la fecha exacta de fundación de Coltejer ni detalla de manera directa cómo sorteó dicha crisis de manera individual.\n\nPor lo tanto, el contexto no provee la información exacta para responder cuándo se fundó Coltejer ni el método específico que usó para superar la crisis de los años treinta.",
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "El sistema se abstiene de responder a la pregunta indicando que los textos no contienen la fecha de fundación de Coltejer ni la explicación específica de cómo sorteó la crisis de los años treinta.",
+      "abstencion_correcta": false,
+      "clave": "emp-01:139f37ac5372"
+    },
+    {
+      "id": "cuc-01",
+      "pregunta": "¿Qué efectos tuvo el terremoto de 1875 en Cúcuta y su región?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.4639
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.4999
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.5115
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.544
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.5645
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.5766
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basándose en el libro *cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf*, el terremoto del 18 de marzo de 1875 tuvo los siguientes efectos en Cúcuta y su región:\n\n* **Destrucción material:** Destruyó por completo no solo a San José de Cúcuta, sino también a las poblaciones de Villa del Rosario, San Antonio del Táchira y San Cristóbal, además de afectar a Pamplona y otros poblados de la región. La iglesia original de Villa del Rosario, por ejemplo, quedó reducida a ruinas.\n* **Pérdidas humanas:** Causó una gran pérdida humana. Aunque un boletín oficial emitido en Pamplona calculaba inicialmente 461 muertos (admitiendo que probablemente se duplicaban o llegaban a más de mil sin contar zonas aledañas), las cuentas finales del alcalde de San José de Cúcuta, Francisco Azuero, registraron **más de 2.500 víctimas mortales**.\n* **Impacto social y económico:** Dejó a un sinnúmero de personas sin hogar y sin bienes, lo que detuvo por completo todas las actividades económicas del valle por un tiempo y aumentó significativamente los índices de pobreza. \n* **Detención del crecimiento poblacional:** El crecimiento de la población que traía la región quedó detenido a raíz del desastre.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta aborda de manera completa los efectos materiales, humanos, económicos y demográficos descritos en la fuente, y todas las afirmaciones coinciden fielmente con el texto provisto.",
+      "abstencion_correcta": true,
+      "clave": "cuc-01:8c70b97fb11c"
+    },
+    {
+      "id": "col-01",
+      "pregunta": "¿En qué se diferenciaba la población indígena del territorio colombiano de la de México o Perú cuando llegaron los españoles?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf",
+          "distancia": 0.4632
+        },
+        {
+          "libro": "etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf",
+          "distancia": 0.4747
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.5051
+        },
+        {
+          "libro": "etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf",
+          "distancia": 0.5184
+        },
+        {
+          "libro": "etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf",
+          "distancia": 0.5232
+        },
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.5446
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basándose en los fragmentos proporcionados, la población indígena del territorio colombiano se diferenciaba de la de México y Perú en los siguientes aspectos:\n\n* **Cantidad de población:** Los cálculos atribuyen al territorio colombiano una población indígena de entre 3 y 4 millones de habitantes, lo cual contrasta con los 25 a 50 millones que pudo tener la población prehispánica de México o los 10 millones del imperio de los Incas en Perú *(Fuente: etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf)*.\n* **Ausencia de imperios fuertes:** En el territorio colombiano no hubo imperios fuertes como los de Perú o México, que tuvieran desigualdades profundas, un jefe hereditario con autoridad sobre amplias poblaciones y la capacidad de emprender nuevas conquistas o coordinar grandes multitudes para construir templos, pirámides y extensas redes de caminos de piedra *(Fuente: historia-minima-de-colombia-jorge-orlando-melo-15465.pdf)*. Aunque las culturas prehispánicas de Colombia estaban en proceso de unificación al producirse la conquista, tampoco llegaron a constituir un imperio como el peruano o el de los aztecas en México *(Fuente: etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf)*.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta aborda de manera completa las diferencias demográficas y de organización política mencionadas en los textos, y todas sus afirmaciones están estrictamente respaldadas por el contexto proporcionado.",
+      "abstencion_correcta": true,
+      "clave": "col-01:be8f63a24c68"
+    },
+    {
+      "id": "par-01",
+      "pregunta": "¿Qué fueron las Convivir y qué relación tuvieron con el paramilitarismo?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.438
+        },
+        {
+          "libro": "historia-de-colombia-contemporanea-ricardo-arias.pdf",
+          "distancia": 0.4398
+        },
+        {
+          "libro": "historia-de-colombia-contemporanea-ricardo-arias.pdf",
+          "distancia": 0.5341
+        },
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.5406
+        },
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.5743
+        },
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.5819
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el contexto proporcionado, las Convivir se describen de la siguiente manera:\n\n* Según el libro *historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf*, las **Asociaciones Comunitarias de Vigilancia Rural (\"Convivir\")** fueron impulsadas por el gobierno del presidente Ernesto Samper Pizano (1994-1998) a través de su ministro de defensa, Fernando Botero Zea. Tuvieron su respaldo legal en los Decretos 2535 de 1993 y 356 de 1994, con la función de contribuir con labores de inteligencia para las fuerzas armadas. \n* En cuanto a su relación con el paramilitarismo, el mismo libro (*historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf*) señala que las Convivir fueron creadas **\"como una forma de regularizar el paramilitarismo\"**. Además, tras ser declaradas inexequibles en 1999, el Estado no recuperó las armas y sus miembros se emplearon con ganaderos y narcotraficantes. Su principal epicentro fue el Departamento de Antioquia, donde Álvaro Uribe Vélez fungía como gobernador, y su liderazgo también se dio a través de gobernadores mediante organizaciones de apariencia legal.\n* Por otro lado, el libro *historia-de-colombia-contemporanea-ricardo-arias.pdf* menciona que el presidente Ernesto Samper creó las Convivir como **\"agrupaciones campesinas armadas por la fuerza pública para asegurar la protección de ciertas regiones\"**, señalando que fueron auspiciadas oficialmente por el gobierno para enfrentar el paramilitarismo (aunque en el mismo texto también se indica de manera general que algunos gobiernos llegaron a auspiciarlo oficialmente).",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": false,
+      "justificacion": "La respuesta tergiversa el texto de Ricardo Arias al afirmar que las Convivir «fueron auspiciadas oficialmente por el gobierno para enfrentar el paramilitarismo», cuando en realidad el contexto las cita como ejemplo de gobiernos que llegaron a «auspiciarlo oficialmente».",
+      "abstencion_correcta": true,
+      "clave": "par-01:1ccd748f0f8b"
+    },
+    {
+      "id": "edu-01",
+      "pregunta": "¿Qué estableció la Ley 39 de 1903 para el sistema educativo colombiano?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.4643
+        },
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.5328
+        },
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.5589
+        },
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.5596
+        },
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.5812
+        },
+        {
+          "libro": "la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf",
+          "distancia": 0.5883
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el documento *la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf*, la Ley 39 de 1903 estableció lo siguiente:\n\n* Estableció durante los primeros treinta años del siglo XX las bases del sistema educativo del país, ratificando lo expuesto en la Constitución de 1886, en el Concordato de 1887 y en la Ley general de educación de 1892.\n* Dividió la enseñanza oficial en primaria, secundaria, industrial, profesional y artística.\n* Estipuló que la educación pública en el país debía estar regida por los cánones de la religión católica.\n* Determinó que la educación primaria debía ser gratuita pero no obligatoria (posteriormente, la ley 56 de 1927 la convirtió en obligatoria).\n* Entre sus rasgos más importantes se encuentran la gran influencia de la iglesia católica en la enseñanza, la distribución de las responsabilidades financieras y administrativas entre la Nación, los departamentos y los municipios, la división rural-urbana de la educación primaria (favoreciendo a la urbana), y la división entre educación secundaria técnica y clásica.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde de manera detallada y completa a la pregunta, y todas sus afirmaciones están estrictamente respaldadas por la información del contexto.",
+      "abstencion_correcta": true,
+      "clave": "edu-01:ee80f079c850"
+    },
+    {
+      "id": "muj-01",
+      "pregunta": "¿Qué era la dote y qué papel cumplía en el matrimonio durante la Colonia?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf",
+          "distancia": 0.4845
+        },
+        {
+          "libro": "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf",
+          "distancia": 0.5053
+        },
+        {
+          "libro": "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf",
+          "distancia": 0.5404
+        },
+        {
+          "libro": "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf",
+          "distancia": 0.56
+        },
+        {
+          "libro": "las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf",
+          "distancia": 0.5611
+        },
+        {
+          "libro": "material-de-apoyo-historia-universal-i-ensjm-14100.pdf",
+          "distancia": 0.562
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en los textos proporcionados, la dote y su papel en el matrimonio se describen de la siguiente manera:\n\n* **Qué era la dote:** \n  * Era una garantía o porción de los derechos sucesorios (herencia patrimonial) que los padres o familiares le entregaban al esposo de la hija al momento de convenir el matrimonio. Podía ser \"profeticia\" (procedente del padre o abuelo), \"adventicia\" (procedente de la madre, abuela o pariente de línea transversal o extraño), o una donación *propter nupcias*. Su valor reflejaba el tamaño de la fortuna familiar y su contenido traducía el hacer económico de quienes la otorgaban (por ejemplo, en la Villa del Socorro incluyó ganado y esclavos). Aunque el esposo era el receptor y administrador de los bienes, no podía disponer de su venta (*las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf*).\n  * Según otra cita del mismo documento (citando a Clara López Beltrán), la dote era el medio para que las mujeres recibieran una parte de su herencia al casarse (*las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf*).\n\n* **Qué papel cumplía:**\n  * Servía para fortalecer económicamente a la nueva unidad familiar o añadir capital a un patrimonio mayor.\n  * Era importante para conseguir maridos respetables.\n  * Le ofrecía a la esposa una participación económica en el contrato matrimonial y una plataforma de seguridad por si quedaba sola, viuda, abandonada o divorciada.\n  * Su valor era directamente proporcional al estatus y a la capacidad económica del futuro esposo.\n  *(Fuente para estos puntos: las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf)*",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde plenamente a qué era la dote y qué papel desempeñaba en el matrimonio, y todas sus afirmaciones factuales se encuentran respaldadas textualmente por el contexto.",
+      "abstencion_correcta": true,
+      "clave": "muj-01:defde086dec1"
+    },
+    {
+      "id": "vio-01",
+      "pregunta": "¿Qué fue la Comisión Investigadora de las Causas Actuales de la Violencia creada en 1958?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf",
+          "distancia": 0.587
+        },
+        {
+          "libro": "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf",
+          "distancia": 0.6556
+        },
+        {
+          "libro": "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf",
+          "distancia": 0.6683
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.6771
+        },
+        {
+          "libro": "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf",
+          "distancia": 0.6815
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.6999
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el contexto proporcionado (*los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-catalina-cartagena.pdf*), la Comisión Investigadora de las Causas Actuales de la Violencia fue una comisión encargada por la Junta Militar y creada por el Decreto 0942 de 1958. Además, es considerada como la precursora remota del libro fundador escrito por Germán Guzmán, Fals Borda y Eduardo Umaña Luna en 1962.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde de forma completa a la pregunta según la información disponible y todas sus afirmaciones están estrictamente respaldadas por el contexto proporcionado.",
+      "abstencion_correcta": true,
+      "clave": "vio-01:e0735d082102"
+    },
+    {
+      "id": "mem-01",
+      "pregunta": "¿Qué casos emblemáticos reconstruyó el Grupo de Memoria Histórica en sus primeros informes entre 2008 y 2011?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.436
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.4909
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.5089
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.5199
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.5203
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.5686
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basado en el documento proveniente del archivo `memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf`, entre 2008 y 2011 el Grupo de Memoria Histórica (GMH) reconstruyó la memoria de los siguientes casos emblemáticos:\n\n* Trujillo –Valle– (2008)\n* El Salado –Bolívar– (2009)\n* La Rochela –Santander– (2010)\n* Bojayá –Chocó– (2010)\n* Bahía Portete –Guajira– (2010)\n* Carare –Santander– (2011)\n* Remedios y Segovia –Antioquia– (2011)\n* San Carlos –Antioquia– (2011)\n* Comuna 13 –Medellín– (2011)\n* El Tigre –Putumayo– (2011)",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta lista con exactitud y exhaustividad todos los casos emblemáticos mencionados en el contexto para el periodo 2008-2011, sin añadir información externa.",
+      "abstencion_correcta": true,
+      "clave": "mem-01:c9b79c05dd42"
+    },
+    {
+      "id": "ind-01",
+      "pregunta": "¿Cómo vivió José María Espinosa la campaña de Nariño en el sur y el paso del río Juanambú?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "memorias-de-un-abanderado-jose-maria-espinosa.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.4803
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.4804
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.4921
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.5045
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.5047
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.5252
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basándome en el contexto proporcionado del libro *memorias-de-un-abanderado-jose-maria-espinosa.pdf*, se mencionan los siguientes eventos y vivencias de José María Espinosa relacionados con la campaña y los movimientos de las tropas:\n\n* **Lealtad al general Nariño:** Espinosa relata que no quería abandonar al general Nariño. Cuando fueron perseguidos y Nariño le ordenó que se salvara mientras él se internaba en el bosque, Espinosa decidió marchar rápidamente por su cuenta para evitar que un grupo de dos personas fuera más fácil de descubrir por el enemigo (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Captura de otros y su propia huida:** Tras separarse de Nariño, los que iban con él fueron alcanzados y cayeron prisioneros, excepto el alférez Martín Correa y el propio Espinosa, quien destaca que tenían buenas piernas y sabían trepar por los riscos y breñas como un ágil pastuso (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Testigo de las acciones y el arrojo de Nariño:** Espinosa estuvo presente como testigo ocular de varias situaciones de peligro e intrepidez del general Nariño, como cuando a Cerca de El Calvario se le murió el caballo de un balazo y tuvo que defenderse de los soldados de caballería enemigos usando sus pistolas hasta la llegada del capitán Joaquín París (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Llegada a Cali:** Tras la campaña y las marchas, Espinosa describe la alegría de llegar con los sobrevivientes a los alrededores de Cali, aunque lamentando la pérdida de compañeros y la incertidumbre sobre la suerte del general Nariño (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n\n*Nota sobre el río Juanambú:* El contexto proporcionado menciona que el general Nariño hizo reconocer los pasos del río para vadearlo o colocar una tarabita (mencionando que se intentó por el punto llamado el Tablón de los Gómez), pero **el fragmento provisto no contiene información específica sobre cómo vivió Espinosa el paso exacto de dicho río**, por lo que no es posible detallar esa vivencia específica basándose únicamente en el texto entregado.",
+      "cobertura": "parcial",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta aborda detalladamente las vivencias de Espinosa durante la campaña descritas en el contexto y declara de manera explícita que la información provista es insuficiente para detallar cómo vivió el paso del río Juanambú.",
+      "abstencion_correcta": true,
+      "clave": "ind-01:5205183afe6c"
+    },
+    {
+      "id": "pol-01",
+      "pregunta": "¿Cuándo y cómo nacieron los partidos Liberal y Conservador en Colombia?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "historia-de-los-partidos-politicos-en-colombia-german-lozano-villegas.pdf",
+        "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+        "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "historia-de-los-partidos-politicos-en-colombia-german-lozano-villegas.pdf",
+          "distancia": 0.4498
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.5149
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.5247
+        },
+        {
+          "libro": "historia-de-los-partidos-politicos-en-colombia-german-lozano-villegas.pdf",
+          "distancia": 0.5264
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.5278
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.5343
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basado en el contexto proporcionado, el nacimiento y la formación de los partidos Liberal y Conservador en Colombia ocurrieron de la siguiente manera:\n\n* **Origen y nombres previos:** \n  * Según el libro *Historia de los partidos políticos en Colombia* (de Germán Lozano Villegas), las personas que ocuparon cargos públicos durante el mandato de Pedro Alcántara Herrán eran seguidores de Bolívar y empezaron a ser llamados \"ministeriales\" o \"partido ministerial\", un partido en forma embrionaria que en **1848** adoptaría el nombre de **Partido Conservador**. Sus oponentes, que habían sido llamados \"progresistas\", volvieron a denominarse **liberales** en **1849**. Con esto habían nacido los dos partidos tradicionales del país.\n  * Por su parte, el libro *Historia mínima de Colombia* (de Jorge Orlando Melo) señala que en mayo de **1848**, Mariano Ospina Rodríguez y José Eusebio Caro consideraron conveniente fundar un **partido conservador** para defender a la sociedad contra las doctrinas inmorales y anárquicas, temiendo la marcha del liberalismo hacia posiciones más radicales y a los conservadores tibios. En el conservatismo inicial (que ejerció el poder entre 1837 y 1851) se unieron antiguos bolivarianos, enemigos de la dictadura defensores del orden tradicional y políticos moderados.\n  * El libro *Historia concisa de Colombia (1810-2013)* (de Michael J. LaRosa y Germán R. Mejía) sitúa la definición de ambos partidos políticos (Liberal y Conservador) en el año **1848**.\n\n* **Evolución y características:**\n  Según *Historia de los partidos políticos en Colombia* (de Germán Lozano Villegas), los partidos evolucionaron como organizaciones formales a partir de la segunda mitad del siglo XIX, eran multiclasistas, cubrían todo el territorio nacional y contaban con el clero como apoyo político en el caso del partido conservador. Durante el resto del siglo, la gran diferencia entre ambas colectividades estuvo relacionada con la situación legal de la iglesia.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde de manera completa a las preguntas sobre el cuándo y el cómo a partir de los textos provistos, y todas las afirmaciones presentadas están estrictamente respaldadas por los fragmentos del contexto.",
+      "abstencion_correcta": true,
+      "clave": "pol-01:0a32c133681c"
+    },
+    {
+      "id": "con-01",
+      "pregunta": "¿Qué es la leyenda negra sobre la conquista española de América?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "la-conquista-espanola-de-america-sverker-arnoldsson.pdf",
+        "la-conquista-y-colonizacion-espanola-de-america-d-benedicto-cuervo-alvarez.pdf",
+        "la-conquista-de-america-pablo-huerga-melcon.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.4401
+        },
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.4513
+        },
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.4594
+        },
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.4606
+        },
+        {
+          "libro": "la-conquista-de-america-pablo-huerga-melcon.pdf",
+          "distancia": 0.4608
+        },
+        {
+          "libro": "la-conquista-y-colonizacion-espanola-de-america-d-benedicto-cuervo-alvarez.pdf",
+          "distancia": 0.4673
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basado en los textos proporcionados, la leyenda negra se describe de la siguiente manera:\n\n* Según el libro *historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf*, se trata de la leyenda de la \"sangrienta España\" que denuncia los horrores, la crueldad, los criminales excesos y los crímenes de la Conquista y la colonización española. Fue iniciada por la indignación cristiana del sacerdote español fray Bartolomé de Las Casas (autor de *Brevísima relación de la destrucción de las Indias*) y propagada en primer lugar por ingleses y franceses que estaban celosos del poderío español.\n* Según el libro *la-conquista-de-america-pablo-huerga-melcon.pdf*, la leyenda negra sostiene que los españoles eran una banda de desgraciados que, ávidos de oro y riqueza, entraron en América destruyéndolo todo, matando a la mayor cantidad de personas posible, esclavizando a los indígenas y subyugándolos colonialmente durante 300 años, sin que hubiera nada positivo o digno de interés en dicha acción.\n* Según el libro *la-conquista-y-colonizacion-espanola-de-america-d-benedicto-cuervo-alvarez.pdf*, algunos autores como Ricardo García Cárcel la consideran un concepto \"conspiranoico\" o una estrategia de \"mal perdedor\" que busca justificar o colorear de un modo más amable la historia de España, presentándola como una invención deliberada producto de la hostilidad de los ajenos o la traición de los propios.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta aborda en su totalidad la definición de la leyenda negra integrando fielmente los distintos puntos de vista y detalles presentes en los textos del contexto.",
+      "abstencion_correcta": true,
+      "clave": "con-01:ccaa2878be53"
+    },
+    {
+      "id": "con-02",
+      "pregunta": "¿Cómo relataron los pueblos nahuas la caída de México-Tenochtitlan ante Cortés?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf",
+          "distancia": 0.5594
+        },
+        {
+          "libro": "la-conquista-y-colonizacion-espanola-de-america-d-benedicto-cuervo-alvarez.pdf",
+          "distancia": 0.5641
+        },
+        {
+          "libro": "el-nuevo-mundo-artehistoria.pdf",
+          "distancia": 0.5676
+        },
+        {
+          "libro": "la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf",
+          "distancia": 0.5879
+        },
+        {
+          "libro": "la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf",
+          "distancia": 0.6017
+        },
+        {
+          "libro": "historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf",
+          "distancia": 0.6021
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Según el contexto proporcionado, los pueblos nahuas no dejaron perecer el recuerdo ni su propia visión del trágico acontecimiento de la Conquista y la ruina final de su metrópoli, México-Tenochtitlan. Conservaron este recuerdo a través de relaciones y pinturas donde expresaron su propia visión de Cortés, los españoles y la Conquista. \n\nEsta información proviene del libro **[la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf]**.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde a la pregunta indicando cómo conservaron y transmitieron su testimonio (a través de relaciones y pinturas), y todas sus afirmaciones se derivan fielmente del contexto.",
+      "abstencion_correcta": true,
+      "clave": "con-02:6a7667a78028"
+    },
+    {
+      "id": "med-01",
+      "pregunta": "¿Qué fue la querella de las investiduras entre el papado y el Imperio?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+        "historia-universal-i-virginia-aguirre-arvizu-maria-de-lourdes-arroyo-pena-dionisio-rodriguez-cabrera-y-sonia-torres-gonzalez-14094.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+          "distancia": 0.4196
+        },
+        {
+          "libro": "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+          "distancia": 0.5025
+        },
+        {
+          "libro": "historia-universal-i-virginia-aguirre-arvizu-maria-de-lourdes-arroyo-pena-dionisio-rodriguez-cabrera-y-sonia-torres-gonzalez-14094.pdf",
+          "distancia": 0.5026
+        },
+        {
+          "libro": "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+          "distancia": 0.5053
+        },
+        {
+          "libro": "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+          "distancia": 0.5177
+        },
+        {
+          "libro": "10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf",
+          "distancia": 0.5268
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en los textos proporcionados, la querella de las investiduras consistió en:\n\n* Según el libro **10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf**, fue la protesta del papado ante el abuso de los emperadores quienes, usurpando atribuciones pontificias, pretendían conferir la autoridad religiosa junto con la civil a los obispos y abades del Imperio. El conflicto comenzó cuando el emperador Enrique IV no quiso aceptar la reforma de la Santa Sede promulgada por el papa Gregorio VII en el sínodo de Lenten (1075) en contra de las \"investiduras laicas\" (la práctica en la que un rey entregaba el báculo y el anillo pastoral a un arzobispo recién nombrado). Esto llevó a que el emperador convocara un concilio en Worms para destituir al papa, lo que desencadenó enfrentamientos, excomuniones y consecuencias a largo plazo como el debilitamiento del dominio del emperador sobre la Iglesia y el aumento de la preeminencia de los príncipes alemanes.\n* Según el libro **historia-universal-i-virginia-aguirre-arvizu-maria-de-lourdes-arroyo-pena-dionisio-rodriguez-cabrera-y-sonia-torres-gonzalez-14094.pdf**, los conflictos entre el poder civil y el clero (conocidos como la Querella de las Investiduras) sobrevinieron porque los mandatorios civiles designaban a los funcionarios religiosos y los reyes protestaron contra la obra reformista del papa Gregorio VII (quien prohibió la simonía e instituyó el celibato). Acatar la decisión del papa significaba para los reyes abandonar en manos de la Iglesia las tierras pertenecientes a obispos y abadías, ya que los obispos eran sus vasallos y disponían de una parte de su feudo.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta define y explica con precisión qué fue la querella de las investiduras basándose estrictamente y en su totalidad en los textos provistos.",
+      "abstencion_correcta": true,
+      "clave": "med-01:e1afbcd02471"
+    },
+    {
+      "id": "al-01",
+      "pregunta": "¿Qué tuvieron en común las políticas económicas de Menem, Carlos Andrés Pérez y Fujimori en los años noventa?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.4962
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.5227
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.6001
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.6297
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.6431
+        },
+        {
+          "libro": "atlas-historico-de-america-d-r-instituto-panamericano-de-geografia-e-historia-3396.pdf",
+          "distancia": 0.6479
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basándose en el libro *Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf*, lo que tuvieron en común las políticas económicas aplicadas por Carlos Menem, Carlos Andrés Pérez y Alberto Fujimori en los años noventa fue lo siguiente:\n\n1. **Fueron políticas neoliberales** (según se detalla en el contexto del mismo libro al explicar la aplicación de estas medidas en la región).\n2. **Ninguno de estos gobiernos dio a conocer a la población el contenido real de las políticas** que aplicarían antes de ser elegidos. Por el contrario, en sus plataformas electorales prometieron exactamente lo opuesto a las medidas económicas que terminaron implementando durante la década de 1990.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta contesta exhaustivamente la pregunta utilizando los puntos comunes detallados en el texto y todas sus afirmaciones son completamente fieles a las fuentes provistas.",
+      "abstencion_correcta": true,
+      "clave": "al-01:6bb0c51a718b"
+    },
+    {
+      "id": "al-02",
+      "pregunta": "¿Qué medidas tomó Carlos Andrés Pérez sobre el petróleo venezolano en 1975 y 1976?",
+      "tipo": "respondible",
+      "libros_esperados": [
+        "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf"
+      ],
+      "recuperados": [
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.5859
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.6778
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.692
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.699
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.7146
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.7222
+        }
+      ],
+      "hit_crudo": true,
+      "hit_filtrado": true,
+      "abstencion_por_umbral": false,
+      "respuesta": "Con base en el contexto proporcionado del libro *etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf*, el presidente venezolano Carlos Andrés Pérez firmó leyes en agosto de 1975 y enero de 1976 que **establecieron el control estatal sobre el petróleo**.",
+      "cobertura": "completa",
+      "se_abstiene": false,
+      "es_fiel": true,
+      "justificacion": "La respuesta responde de manera precisa y completa a la pregunta basándose estrictamente en los datos que proporciona el contexto.",
+      "abstencion_correcta": true,
+      "clave": "al-02:892b3cf795b2"
+    },
+    {
+      "id": "neg-cerca-01",
+      "pregunta": "¿Qué fue el Plan Cóndor y qué dictaduras del Cono Sur participaron?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.676
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.6812
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.6816
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.6909
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.6942
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.7071
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-01:1b9f37b973c5"
+    },
+    {
+      "id": "neg-cerca-02",
+      "pregunta": "¿Qué ocurrió en la masacre de El Mozote en El Salvador en 1981?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.7616
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.7768
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.7824
+        },
+        {
+          "libro": "historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf",
+          "distancia": 0.7839
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.7843
+        },
+        {
+          "libro": "los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-cartagena.pdf",
+          "distancia": 0.7871
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-02:534a032ca2fd"
+    },
+    {
+      "id": "neg-cerca-03",
+      "pregunta": "¿Por qué estalló la Guerra del Fútbol entre Honduras y El Salvador en 1969?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "material-de-apoyo-historia-universal-ii-ensjm-14093.pdf",
+          "distancia": 0.7435
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.745
+        },
+        {
+          "libro": "material-de-apoyo-historia-universal-ii-ensjm-14093.pdf",
+          "distancia": 0.7466
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.7468
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.7489
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.7514
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-03:208c46c11e0b"
+    },
+    {
+      "id": "neg-cerca-04",
+      "pregunta": "¿Qué pasó en la masacre de la Escuela Santa María de Iquique en 1907?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.7416
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.7601
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.7674
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.7709
+        },
+        {
+          "libro": "material-de-apoyo-historia-universal-ii-ensjm-14093.pdf",
+          "distancia": 0.7725
+        },
+        {
+          "libro": "cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf",
+          "distancia": 0.7777
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-04:e3d62ec40303"
+    },
+    {
+      "id": "neg-cerca-05",
+      "pregunta": "¿Qué fue el Caracazo de 1989 en Venezuela?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.704
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.7308
+        },
+        {
+          "libro": "independencia-hispanoamericana-y-lucha-de-clases-olmedo-beluche-3400.pdf",
+          "distancia": 0.734
+        },
+        {
+          "libro": "independencia-hispanoamericana-y-lucha-de-clases-olmedo-beluche-3400.pdf",
+          "distancia": 0.7432
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7435
+        },
+        {
+          "libro": "historia-universal-cronologia-basica-historiaunida-14098.pdf",
+          "distancia": 0.745
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-05:9826cf211310"
+    },
+    {
+      "id": "neg-cerca-06",
+      "pregunta": "¿Qué ocurrió en la masacre de Mapiripán en 1997?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.6772
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.6843
+        },
+        {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.6883
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.6931
+        },
+        {
+          "libro": "memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf",
+          "distancia": 0.6941
+        },
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.703
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-06:5e976888d6d6"
+    },
+    {
+      "id": "neg-cerca-07",
+      "pregunta": "¿Cómo fue el gobierno de Iván Duque en Colombia entre 2018 y 2022?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.605
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.6219
+        },
+        {
+          "libro": "breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf",
+          "distancia": 0.6227
+        },
+        {
+          "libro": "empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf",
+          "distancia": 0.6229
+        },
+        {
+          "libro": "historia-de-colombia-contemporanea-ricardo-arias.pdf",
+          "distancia": 0.6232
+        },
+        {
+          "libro": "historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf",
+          "distancia": 0.6266
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": false,
+      "respuesta": "Basándome en el contexto proporcionado, el texto no contiene información sobre el gobierno de Iván Duque (2018-2022).",
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "El contexto no contiene información sobre el gobierno de Iván Duque ni el periodo 2018-2022, por lo que el sistema se abstiene de manera justificada.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-07:983e6e7878f5"
+    },
+    {
+      "id": "neg-cerca-08",
+      "pregunta": "¿Qué sucedió en la masacre de Napalpí en el Chaco argentino en 1924?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.7471
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7576
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.7805
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.7883
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.7893
+        },
+        {
+          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
+          "distancia": 0.7973
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-08:1ee4171074b6"
+    },
+    {
+      "id": "neg-cerca-09",
+      "pregunta": "¿Qué fue la Revuelta de la Chibata de los marineros brasileños en 1910?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "historia-de-colombia-contemporanea-ricardo-arias.pdf",
+          "distancia": 0.7633
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.7912
+        },
+        {
+          "libro": "independencia-hispanoamericana-y-lucha-de-clases-olmedo-beluche-3400.pdf",
+          "distancia": 0.7939
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.7941
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.7998
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.8095
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-09:2790fd0727f4"
+    },
+    {
+      "id": "neg-cerca-10",
+      "pregunta": "¿Qué fue la masacre del Perejil ordenada por Trujillo en 1937?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "historia-del-mundo-contemporaneo-1870-2008-maria-dolores-bejar-14095.pdf",
+          "distancia": 0.7322
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.7363
+        },
+        {
+          "libro": "material-de-apoyo-historia-universal-ii-ensjm-14093.pdf",
+          "distancia": 0.7483
+        },
+        {
+          "libro": "historia-del-mundo-contemporaneo-1870-2008-maria-dolores-bejar-14095.pdf",
+          "distancia": 0.7652
+        },
+        {
+          "libro": "historia-del-mundo-contemporaneo-1870-2008-maria-dolores-bejar-14095.pdf",
+          "distancia": 0.7746
+        },
+        {
+          "libro": "historia-del-mundo-contemporaneo-1870-2008-maria-dolores-bejar-14095.pdf",
+          "distancia": 0.7765
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-10:352d3d1d109e"
+    },
+    {
+      "id": "neg-cerca-11",
+      "pregunta": "¿Qué fue la Guerra de los Farrapos en el sur de Brasil?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.6555
+        },
+        {
+          "libro": "atlas-historico-de-america-d-r-instituto-panamericano-de-geografia-e-historia-3396.pdf",
+          "distancia": 0.6838
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.6947
+        },
+        {
+          "libro": "etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf",
+          "distancia": 0.7069
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.7164
+        },
+        {
+          "libro": "historia-de-america-latina-recorridos-tematicos-e-historiograficos-siglos-xix-y-xx-svaldo-barreneche-andres-bisso-y-jorge-troisi-melean-3397.pdf",
+          "distancia": 0.7279
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-11:10293b5ccd99"
+    },
+    {
+      "id": "neg-cerca-12",
+      "pregunta": "¿Qué ocurrió en la masacre de Trelew en Argentina en 1972?",
+      "tipo": "no_respondible",
+      "libros_esperados": [],
+      "recuperados": [
+        {
+          "libro": "carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf",
+          "distancia": 0.74
+        },
+        {
+          "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
+          "distancia": 0.7437
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7457
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7459
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7465
+        },
+        {
+          "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
+          "distancia": 0.7501
+        }
+      ],
+      "hit_crudo": null,
+      "hit_filtrado": null,
+      "abstencion_por_umbral": true,
+      "respuesta": null,
+      "cobertura": "abstencion",
+      "se_abstiene": true,
+      "es_fiel": null,
+      "justificacion": "Ningún fragmento pasó el umbral.",
+      "abstencion_correcta": true,
+      "clave": "neg-cerca-12:0367218f1d0c"
+    }
+  ]
+}
