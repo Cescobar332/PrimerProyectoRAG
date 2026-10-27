@@ -19,6 +19,7 @@ def test_une_texto_espaciado(entrada, esperado):
     "entre A y B",
     "El 5 y 6 de abril",
     "de 5 años",
+    "el 2o lugar",
     "Texto normal, sin problemas.",
     "",
 ])
