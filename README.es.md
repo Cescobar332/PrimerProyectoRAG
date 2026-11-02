@@ -39,12 +39,11 @@ Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](
 
 ### Hallazgos
 
-- **Una respuesta con la fuente bien citada puede afirmar lo contrario de lo que dice esa fuente (`par-01`).** Uno de los libros menciona las Convivir como ejemplo de gobiernos que llegaron a auspiciar oficialmente el paramilitarismo. El modelo escribió que las Convivir se crearon "para enfrentar el paramilitarismo", citando ese mismo libro. El campo `fuentes` era correcto y el contenido no. Por eso la fidelidad se mide aparte de la citación.
-- **La extracción del PDF rompió un dato que sí estaba en el corpus (`emp-01`).** La fecha de fundación de Coltejer aparece en el libro de Carlos Dávila, pero pypdf la extrajo como `1 9 0 7`. El sistema no la encontró y respondió que no tenía la información. Es un problema de calidad de datos en la ingesta, no del modelo ni del umbral, y solo apareció al evaluar.
+- **Una respuesta con la fuente bien citada puede afirmar lo contrario de lo que dice esa fuente (`par-01`, primera corrida).** Uno de los libros menciona las Convivir como ejemplo de gobiernos que llegaron a auspiciar oficialmente el paramilitarismo. El modelo escribió que las Convivir se crearon "para enfrentar el paramilitarismo", citando ese mismo libro. El campo `fuentes` era correcto y el contenido no. Por eso la fidelidad se mide aparte de la citación.
 - **El umbral funciona con poco margen, y el prompt actúa como segunda capa.** La pregunta respondible con mayor distancia quedó en 0.587 y la negativa más cercana en 0.605. Esa negativa (sobre el gobierno de Iván Duque) pasó el umbral con sus 6 fragmentos y la rechazó el LLM, siguiendo la instrucción de decir cuando el contexto no contiene la respuesta. Las otras 11 negativas las descartó el umbral. El umbral no se reajustó con estos resultados, para no contaminar la evaluación.
 - **Respuestas parciales honestas (`ind-01`).** Cuando el contexto cubre solo una parte de la pregunta, el modelo responde lo que tiene y dice explícitamente qué le falta, en vez de completar con conocimiento propio.
-- **Texto mal extraído del PDF (`emp-01`).** Un libro (Dávila) tiene letras y números espaciados por la extracción (`1 9 0 7`). Se añadió `normalizacion.py` (13 tests) y se aplica al texto recuperado antes de pasarlo al LLM. No corrigió `emp-01`: el fragmento con la fecha de fundación de Coltejer quedaba en el puesto 7 (distancia 0.6385 frente a 0.633 del sexto), así que nunca llegó al modelo. Re-embebido normalizado, su distancia baja a 0.6316 y entraría al top-6. En un segundo fragmento muy espaciado la distancia subió (+0.024), con una pregunta corta poco informativa. La evidencia (n=2) no justifica aún re-embeber las 2.593 partes del libro (ver `eval/experimento_normalizacion.py`).
-- Entre corridas, `par-01` pasó a ser fiel y `con-02` pasó a respuesta parcial sin cambios en sus fragmentos: es variación del LLM, no efecto de la normalización.
+- **Texto mal extraído del PDF (`emp-01`), detectado solo al evaluar.** Un libro (Dávila) tiene letras y números espaciados por la extracción (`1 9 0 7`). Se añadió `normalizacion.py` (13 tests) y se aplica al texto recuperado antes de pasarlo al LLM. No corrigió `emp-01`: el fragmento con la fecha de fundación de Coltejer quedaba en el puesto 7 (distancia 0.6385 frente a 0.633 del sexto), así que nunca llegó al modelo. Re-embebido normalizado, su distancia baja a 0.6316 y entraría al top-6. En un segundo fragmento muy espaciado la distancia subió (+0.024), con una pregunta corta poco informativa. La evidencia (n=2) no justifica aún re-embeber las 2.593 partes del libro (ver `eval/experimento_normalizacion.py`).
+- **Variación entre corridas.** `par-01` pasó a ser fiel y `con-02` pasó a respuesta parcial con los mismos fragmentos recuperados y en libros sin texto espaciado: es variación del LLM, no efecto de la normalización.
 
 ### Limitaciones
 
@@ -52,7 +51,7 @@ Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](
 - **Muestra pequeña.** Con 18 preguntas respondibles, cada una vale unos 5.5 puntos porcentuales. Por eso los resultados se muestran como n/total.
 - **Preguntas probablemente fáciles para el retriever.** Las respondibles se escribieron a partir del texto de los libros y comparten vocabulario con él, lo que favorece el 18/18 en Hit@6. Faltan preguntas parafraseadas.
 - **Juez posiblemente indulgente.** En la revisión manual se encontraron casos donde el juez aceptó como fieles inferencias leves del modelo, así que la métrica de fidelidad probablemente es optimista.
-- Hit@k se mide por libro, no por fragmento: en `emp-01` llegaron tres fragmentos del libro correcto, pero no el que contenía la respuesta.
+- **Hit@k se mide por libro, no por fragmento.** En `emp-01` llegaron tres fragmentos del libro correcto, pero no el que contenía la respuesta.
 
 ---
 ## Por qué este proyecto

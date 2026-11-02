@@ -19,9 +19,15 @@ Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval
 | Retrieval: correct book in top-k | Hit@6 before the threshold | 18/18 (100.0%) |
 | Retrieval after threshold | Hit@6 after the threshold (0.65) | 18/18 (100.0%) |
 | Answers what the corpus covers | Answerable questions not refused | 17/18 (94.4%) |
-| Answers fully | Answerable questions with a complete (not partial) answer | 16/18 (88.9%) |
+| Answers fully | Answerable questions with a complete (not partial) answer | 15/18 (83.3%) |
 | Refuses what the corpus doesn't cover | Out-of-corpus questions correctly refused | 12/12 (100.0%) |
-| Faithfulness to context | Answers with no claims outside the retrieved context (judge: gemini-flash-latest) | 16/17 (94.1%) |
+| Faithfulness to context | Answers with no claims outside the retrieved context (judge: gemini-flash-latest) | 17/17 (100.0%) |
+
+**Failed cases:**
+
+- `emp-01` (top-1 distance: 0.5633): refused despite having the information
+- `ind-01` (top-1 distance: 0.4803): partial answer
+- `con-02` (top-1 distance: 0.5594): partial answer
 
 ### How it was measured
 
@@ -32,12 +38,11 @@ Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval
 
 ### Findings
 
-- **An answer that cites the right source can still say the opposite of what that source says (`par-01`).** One book mentions the Convivir as an example of governments officially sponsoring paramilitarism. The model wrote that the Convivir were created "to fight paramilitarism", citing that same book. The `fuentes` field was correct and the content wasn't. That is why faithfulness is measured separately from citation.
-- **PDF extraction broke a fact that was actually in the corpus (`emp-01`).** Coltejer's founding date appears in Carlos Dávila's book, but pypdf extracted it as `1 9 0 7`. The system couldn't find it and answered that it didn't have the information. This is a data-quality problem in ingestion, not a model or threshold problem, and it only surfaced through evaluation.
+- **An answer that cites the right source can still say the opposite of what that source says (`par-01`, first run).** One book mentions the Convivir as an example of governments officially sponsoring paramilitarism. The model wrote that the Convivir were created "to fight paramilitarism", citing that same book. The `fuentes` field was correct and the content wasn't. That is why faithfulness is measured separately from citation.
 - **The threshold works with a narrow margin, and the prompt acts as a second layer.** The farthest answerable question landed at distance 0.587 and the closest negative at 0.605. That negative (about Iván Duque's presidency) passed the threshold with all 6 chunks and was refused by the LLM, following the instruction to say when the context doesn't contain the answer. The threshold filtered out the other 11 negatives. The threshold was not retuned on these results, to avoid contaminating the evaluation.
 - **Honest partial answers (`ind-01`).** When the context covers only part of the question, the model answers what it can and states explicitly what's missing, instead of filling the gap with its own knowledge.
-- **Garbled PDF extraction (`emp-01`).** One book (Dávila) has letters and digits spaced out by extraction (`1 9 0 7`). Added `normalizacion.py` (13 tests), applied to retrieved text before it reaches the LLM. It did not fix `emp-01`: the chunk with Coltejer's founding date ranked 7th (distance 0.6385 vs. 0.633 for 6th), so it never reached the model. Re-embedded after normalization its distance drops to 0.6316 and it would make the top 6. On a second heavily spaced chunk the distance rose (+0.024), with a short, low-information question. The evidence (n=2) does not yet justify re-embedding the book's 2,593 chunks (see `eval/experimento_normalizacion.py`).
-- Between runs, `par-01` became faithful and `con-02` became partial with no change to their chunks: this is LLM variance, not an effect of normalization.
+- **Garbled PDF extraction (`emp-01`), found only through evaluation.** One book (Dávila) has letters and digits spaced out by extraction (`1 9 0 7`). Added `normalizacion.py` (13 tests), applied to retrieved text before it reaches the LLM. It did not fix `emp-01`: the chunk with Coltejer's founding date ranked 7th (distance 0.6385 vs. 0.633 for 6th), so it never reached the model. Re-embedded after normalization its distance drops to 0.6316 and it would make the top 6. On a second heavily spaced chunk the distance rose (+0.024), with a short, low-information question. The evidence (n=2) does not yet justify re-embedding the book's 2,593 chunks (see `eval/experimento_normalizacion.py`).
+- **Run-to-run variance.** `par-01` became faithful and `con-02` became partial with the same retrieved chunks, from books without spaced-out text: this is LLM variance, not an effect of normalization.
 
 ### Limitations
 
@@ -45,7 +50,7 @@ Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval
 - **Small sample.** With 18 answerable questions, each one is worth about 5.5 percentage points. That's why results are shown as n/total.
 - **Questions are probably easy for the retriever.** The answerable questions were written from the books' text and share vocabulary with it, which favors the 18/18 Hit@6. Paraphrased questions are still missing.
 - **The judge may be lenient.** Manual review found cases where the judge accepted mild inferences by the model as faithful, so the faithfulness metric is probably optimistic.
-- Hit@k is measured per book, not per chunk: in `emp-01` three chunks from the right book were retrieved, but not the one containing the answer.
+- **Hit@k is measured per book, not per chunk.** In `emp-01` three chunks from the right book were retrieved, but not the one containing the answer.
 
 ---
 
