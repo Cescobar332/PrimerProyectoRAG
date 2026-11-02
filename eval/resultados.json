@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-10-24T12:51:34",
+  "fecha": "2026-11-01T22:00:11",
   "configuracion": {
     "umbral_relevancia": 0.65,
     "n_resultados": 6,
@@ -23,9 +23,9 @@
       "porcentaje": 94.4
     },
     "responde_completo": {
-      "aciertos": 16,
+      "aciertos": 15,
       "total": 18,
-      "porcentaje": 88.9
+      "porcentaje": 83.3
     },
     "rechaza_no_respondibles": {
       "aciertos": 12,
@@ -33,9 +33,9 @@
       "porcentaje": 100.0
     },
     "fidelidad": {
-      "aciertos": 16,
+      "aciertos": 17,
       "total": 17,
-      "porcentaje": 94.1
+      "porcentaje": 100.0
     }
   },
   "preguntas": [
@@ -75,11 +75,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el contexto proporcionado, Carlos Pizarro dejó las armas porque él y los militantes del M-19 llegaron a entender que la lucha armada ya no era la vía (tras haber revaluado las arcaicas concepciones de la misma), tomando la posición en favor de los acuerdos de paz. Esto condujo a la decisión del Secretariado General y de su último comandante, Carlos Pizarro Leóngomez, de realizar la dejación de las armas, la reintegración a la vida civil y constituirse en un movimiento político legal (\"Por Colombia, por la paz, dejad las armas\"). \n\nEsta información proviene del libro: *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*.",
+      "respuesta": "Con base en el contexto proporcionado, Carlos Pizarro dejó las armas porque él y sus hombres fueron los primeros en entender que la lucha armada ya no era la vía (tras 25 años de predicarla), lo que los llevó a decidir la dejación de las armas, la reintegración a la vida civil y constituirse en un movimiento político legal en favor de la paz, tal como se detalla en el libro *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*. \n\nEn el texto también se describe el momento de la dejación de armas, donde se menciona que Pizarro ordenó la formación proclamando: *\"Por Colombia, por la paz, dejad las armas\"*, dejando su pistola envuelta en una bandera nacional tras recordar a los compañeros que no llegaron y a \"los héroes que el M-19 entregó para que Colombia tuviera paz, dignidad y futuro\" (Fuente: *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*).",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde de forma completa a la pregunta y todas sus afirmaciones están respaldadas fielmente por los fragmentos del contexto provisto.",
+      "justificacion": "La respuesta explica de manera completa las razones proporcionadas en el texto sobre por qué Carlos Pizarro dejó las armas y todas las afirmaciones coinciden fielmente con los fragmentos del contexto.",
       "abstencion_correcta": true,
       "clave": "m19-01:5c8455438706"
     },
@@ -119,11 +119,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Según el libro *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*, Antonio Navarro (como candidato de la Alianza Democrática M-19) obtuvo **754.740** votos en las elecciones presidenciales de 1990.",
+      "respuesta": "Basándonos en el contexto proporcionado del libro *carlos-pizarro-leongomez-de-guerrillero-a-candidato-presidencial-varios-autores.pdf*, Antonio Navarro Wolff obtuvo **754.740** votos en las elecciones presidenciales de 1990 representando a la Alianza Democrática M-19.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde con precisión la pregunta y la cifra de 754.740 votos está textualmente respaldada en la tabla electoral del contexto.",
+      "justificacion": "La respuesta responde de forma directa y precisa a la pregunta formulada, y la cifra de 754.740 votos está plenamente respaldada por la tabla de resultados de las elecciones de 1990 presente en el contexto.",
       "abstencion_correcta": true,
       "clave": "m19-02:02094390673a"
     },
@@ -163,11 +163,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el contexto proporcionado, la bonanza cafetera de 1976-1979 tuvo los siguientes efectos:\n\n* Estuvo acompañada de un alto endeudamiento externo de la administración Turbay.\n* Fue una fase en contra dentro de un periodo que, en general, se caracterizó por ser de cuasi permanente devaluación real del peso colombiano.\n\nEsta información proviene del libro *Breve historia económica de Colombia* de Salomón Kalmanovitz (`breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf`).",
+      "respuesta": "Según el libro *Breve historia económica de Colombia* de Salomón Kalmanovitz, la bonanza cafetera de 1976-1979 (la cual estuvo acompañada de un alto endeudamiento externo de la administración Turbay) constituyó una fase en contra que formó parte de la cuasi permanente devaluación real del peso colombiano, y su efecto principal en relación con la tasa de cambio y la economía fue que operó como un factor que afectó la tasa de cambio real en contra de la devaluación general del periodo.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta aborda los efectos sobre la economía y la tasa de cambio según el contexto provisto, y todas sus afirmaciones están estrictamente respaldadas por el texto.",
+      "justificacion": "La respuesta responde a la pregunta dentro de lo que permite el contexto y todas sus afirmaciones factuales se sustentan fielmente en la cita sobre la segunda mitad del siglo y la administración Turbay.",
       "abstencion_correcta": true,
       "clave": "eco-01:81415daa8129"
     },
@@ -207,11 +207,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en los textos proporcionados, el contexto **no contiene** la respuesta completa a tu pregunta:\n\n* El texto *breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf* menciona a **Coltejer** como una importante compañía manufacturera cuyos capitales iniciales se originaron en la producción y comercialización del café, pero no indica cuándo fue fundada ni cómo sorteó la crisis de los años treinta.\n* El texto *empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf* menciona la fundación de otra empresa textil (*Tejidos El Cóndor, Tejicóndor*) el 3 de abril de 1934 para competir con las ya consolidadas **Coltejer** y Fabricato, y también señala de forma general que algunas empresas sortearon la crisis recurriendo a créditos y a una campaña publicitaria/proteccionista (*“Abecedario económico del colombiano”*), pero **no** especifica la fecha exacta de fundación de Coltejer ni detalla de manera directa cómo sorteó dicha crisis de manera individual.\n\nPor lo tanto, el contexto no provee la información exacta para responder cuándo se fundó Coltejer ni el método específico que usó para superar la crisis de los años treinta.",
+      "respuesta": "Con base en el contexto proporcionado:\n\n* **Sobre la fundación de Coltejer:** El texto menciona que Coltejer ya era una compañía manufacturera importante cuyos nuevos capitales industriales tuvieron su origen en la producción y comercialización del café (según el libro *breve-historia-economica-de-colombia-salomon-kalmanovitz.pdf*), y también se le cita como una textilera ya consolidada para el año 1934 (según el libro *empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf*). Sin embargo, **el contexto no contiene la fecha exacta de su fundación**.\n* **Sobre cómo logró sortear la crisis de los años treinta:** El contexto no menciona específicamente los métodos que usó Coltejer para sortear la crisis, aunque sí detalla de forma general que algunas empresas lo lograron recurriendo a créditos internos y externos, a la recomposición de acciones (según *empresas-y-empresarios-en-la-historia-de-colombia-carlos-davila-l-de-guevara.pdf*) o reorientando su producción hacia el comercio interno y bajo la protección de aranceles favorables (según *historia-concisa-de-colombia-1810-2013-michael-j-larosa-y-german-r-mejia.pdf*).",
       "cobertura": "abstencion",
       "se_abstiene": true,
       "es_fiel": null,
-      "justificacion": "El sistema se abstiene de responder a la pregunta indicando que los textos no contienen la fecha de fundación de Coltejer ni la explicación específica de cómo sorteó la crisis de los años treinta.",
+      "justificacion": "El sistema se abstiene de responder ambas partes de la pregunta debido a que el contexto no contiene ni el año de fundación de Coltejer ni las acciones específicas que tomó la empresa para sortear la crisis de los años treinta.",
       "abstencion_correcta": false,
       "clave": "emp-01:139f37ac5372"
     },
@@ -251,11 +251,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basándose en el libro *cucuta-y-norte-de-santander-configuracion-historica-de-una-comunidad-imaginada-guillermo-leon-labrador-morales.pdf*, el terremoto del 18 de marzo de 1875 tuvo los siguientes efectos en Cúcuta y su región:\n\n* **Destrucción material:** Destruyó por completo no solo a San José de Cúcuta, sino también a las poblaciones de Villa del Rosario, San Antonio del Táchira y San Cristóbal, además de afectar a Pamplona y otros poblados de la región. La iglesia original de Villa del Rosario, por ejemplo, quedó reducida a ruinas.\n* **Pérdidas humanas:** Causó una gran pérdida humana. Aunque un boletín oficial emitido en Pamplona calculaba inicialmente 461 muertos (admitiendo que probablemente se duplicaban o llegaban a más de mil sin contar zonas aledañas), las cuentas finales del alcalde de San José de Cúcuta, Francisco Azuero, registraron **más de 2.500 víctimas mortales**.\n* **Impacto social y económico:** Dejó a un sinnúmero de personas sin hogar y sin bienes, lo que detuvo por completo todas las actividades económicas del valle por un tiempo y aumentó significativamente los índices de pobreza. \n* **Detención del crecimiento poblacional:** El crecimiento de la población que traía la región quedó detenido a raíz del desastre.",
+      "respuesta": "Basado en el libro *Cúcuta y Norte de Santander: Configuración histórica de una comunidad imaginada*, escrito por Guillermo León Labrador Morales, el terremoto del 18 de marzo de 1875 tuvo los siguientes efectos:\n\n* **Destrucción material:** Destruyó por completo no solo a San José de Cúcuta, sino también a las poblaciones de Villa del Rosario, San Antonio del Táchira y San Cristóbal, afectando además a Pamplona y otros poblados de la región. Esto incluyó la pérdida total de la iglesia original de Villa del Rosario, de la cual solo quedaron ruinas, y la destrucción de templos y edificaciones en el valle de Cúcuta.\n* **Pérdida humana:** Causó una gran cantidad de muertes. Aunque un boletín oficial calculaba inicialmente entre 461 y más de mil fallecidos (sin contar zonas aledañas), las cuentas finales del alcalde de San José de Cúcuta, Francisco Azuero, registraron **más de 2.500 víctimas mortales**.\n* **Impacto social y económico:** Dejó a un sinnúmero de personas sin hogar y sin bienes, lo que detuvo por completo todas las actividades económicas del valle durante un tiempo y provocó un aumento significativo en los índices de pobreza. \n* **Hallazgos milagrosos atribuidos por la tradición:** Entre las ruinas del templo y la ciudad, las imágenes de San José y de Nuestra Señora de Cúcuta (también referida como Nuestra Señora de los Remedios) aparecieron incólumes o intactas, lo que posteriormente se interpretó como un milagro y un signo de resurgimiento para la comunidad.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta aborda de manera completa los efectos materiales, humanos, económicos y demográficos descritos en la fuente, y todas las afirmaciones coinciden fielmente con el texto provisto.",
+      "justificacion": "La respuesta responde de manera completa a los efectos del sismo en la región y cada uno de los puntos expuestos está respaldado explícitamente en los fragmentos del texto.",
       "abstencion_correcta": true,
       "clave": "cuc-01:8c70b97fb11c"
     },
@@ -295,11 +295,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basándose en los fragmentos proporcionados, la población indígena del territorio colombiano se diferenciaba de la de México y Perú en los siguientes aspectos:\n\n* **Cantidad de población:** Los cálculos atribuyen al territorio colombiano una población indígena de entre 3 y 4 millones de habitantes, lo cual contrasta con los 25 a 50 millones que pudo tener la población prehispánica de México o los 10 millones del imperio de los Incas en Perú *(Fuente: etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf)*.\n* **Ausencia de imperios fuertes:** En el territorio colombiano no hubo imperios fuertes como los de Perú o México, que tuvieran desigualdades profundas, un jefe hereditario con autoridad sobre amplias poblaciones y la capacidad de emprender nuevas conquistas o coordinar grandes multitudes para construir templos, pirámides y extensas redes de caminos de piedra *(Fuente: historia-minima-de-colombia-jorge-orlando-melo-15465.pdf)*. Aunque las culturas prehispánicas de Colombia estaban en proceso de unificación al producirse la conquista, tampoco llegaron a constituir un imperio como el peruano o el de los aztecas en México *(Fuente: etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf)*.",
+      "respuesta": "Con base en el contexto proporcionado, la población indígena del territorio colombiano se diferenciaba de la de México y Perú en los siguientes aspectos:\n\n* **Cantidad de población:** Según el libro *etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf*, los cálculos más recientes le atribuyen a Colombia una población indígena fluctuante entre los 3 y los 4 millones de habitantes aborígenes, lo cual contrasta con los 25 a 50 millones que pudo tener la población prehispánica de México o los 10 millones del imperio de los Incas en Perú.\n* **Ausencia de imperios fuertes:** El libro *historia-minima-de-colombia-jorge-orlando-melo-15465.pdf* señala que en el territorio colombiano no hubo imperios fuertes como los de Perú o México, los cuales contaban con desigualdades profundas, un jefe hereditario con autoridad sobre amplias poblaciones, y la capacidad de emprender nuevas conquistas y coordinar grandes multitudes para construir templos, pirámides y redes de caminos. Por su parte, el texto de *etapas-y-sentido-de-la-historia-de-colombia-articulo-jaime-jaramillo-uribe.pdf* añade que las culturas indígenas de Colombia presentaban un desarrollo diverso y, aunque probablemente estaban en proceso de unificación al producirse la conquista, no llegaron a constituir un imperio como el peruano o el mexicano de los aztecas.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta aborda de manera completa las diferencias demográficas y de organización política mencionadas en los textos, y todas sus afirmaciones están estrictamente respaldadas por el contexto proporcionado.",
+      "justificacion": "La respuesta responde plenamente a la pregunta contrastando los aspectos demográficos y de organización sociopolítica señalados en los textos, y todas sus afirmaciones están respaldadas con precisión por el contexto.",
       "abstencion_correcta": true,
       "clave": "col-01:be8f63a24c68"
     },
@@ -339,11 +339,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el contexto proporcionado, las Convivir se describen de la siguiente manera:\n\n* Según el libro *historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf*, las **Asociaciones Comunitarias de Vigilancia Rural (\"Convivir\")** fueron impulsadas por el gobierno del presidente Ernesto Samper Pizano (1994-1998) a través de su ministro de defensa, Fernando Botero Zea. Tuvieron su respaldo legal en los Decretos 2535 de 1993 y 356 de 1994, con la función de contribuir con labores de inteligencia para las fuerzas armadas. \n* En cuanto a su relación con el paramilitarismo, el mismo libro (*historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf*) señala que las Convivir fueron creadas **\"como una forma de regularizar el paramilitarismo\"**. Además, tras ser declaradas inexequibles en 1999, el Estado no recuperó las armas y sus miembros se emplearon con ganaderos y narcotraficantes. Su principal epicentro fue el Departamento de Antioquia, donde Álvaro Uribe Vélez fungía como gobernador, y su liderazgo también se dio a través de gobernadores mediante organizaciones de apariencia legal.\n* Por otro lado, el libro *historia-de-colombia-contemporanea-ricardo-arias.pdf* menciona que el presidente Ernesto Samper creó las Convivir como **\"agrupaciones campesinas armadas por la fuerza pública para asegurar la protección de ciertas regiones\"**, señalando que fueron auspiciadas oficialmente por el gobierno para enfrentar el paramilitarismo (aunque en el mismo texto también se indica de manera general que algunos gobiernos llegaron a auspiciarlo oficialmente).",
+      "respuesta": "Con base en los textos proporcionados, las **Convivir** (Asociaciones Comunitarias de Vigilancia Rural) fueron agrupaciones campesinas armadas —también descritas como organizaciones de apariencia legal— impulsadas por el gobierno del presidente Ernesto Samper Pizano (por medio de su ministro de defensa, Fernando Botero Zea) y creadas oficialmente con la función de contribuir con labores de inteligencia para las fuerzas armadas y asegurar la protección de ciertas regiones. Tuvieron su respaldo legal en los Decretos 2535 de 1993 y 356 de 1994, y su principal epicentro fue el departamento de Antioquia, donde Álvaro Uribe Vélez fungía como gobernador.\n\nEn cuanto a su relación con el paramilitarismo, los textos señalan lo siguiente:\n* Según el libro *historia-del-paramilitarismo-en-colombia-edgar-de-jesus-velasquez-ribera.pdf*, las Convivir fueron una forma de **regularizar el paramilitarismo**. Tras ser declaradas inexequibles en 1999, el Estado no recuperó sus armas y sus miembros pasaron a emplearse con ganaderos y narcotraficantes. Asimismo, el texto menciona que la expansión del paramilitarismo en Colombia se dio, entre otras vías, a través de organizaciones de apariencia legal como las Convivir, lideradas por gobernadores.\n* Según el libro *historia-de-colombia-contemporanea-ricardo-arias.pdf*, fueron agrupaciones campesinas **auspiciadas oficialmente** y \"armadas por la fuerza pública para asegurar la protección de ciertas regiones\" como parte de los intentos del gobierno para enfrentar el conflicto.",
       "cobertura": "completa",
       "se_abstiene": false,
-      "es_fiel": false,
-      "justificacion": "La respuesta tergiversa el texto de Ricardo Arias al afirmar que las Convivir «fueron auspiciadas oficialmente por el gobierno para enfrentar el paramilitarismo», cuando en realidad el contexto las cita como ejemplo de gobiernos que llegaron a «auspiciarlo oficialmente».",
+      "es_fiel": true,
+      "justificacion": "La respuesta responde plenamente a la definición de las Convivir y su vínculo con el paramilitarismo, fundamentando todas sus afirmaciones estrictamente en los fragmentos citados.",
       "abstencion_correcta": true,
       "clave": "par-01:1ccd748f0f8b"
     },
@@ -383,11 +383,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el documento *la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf*, la Ley 39 de 1903 estableció lo siguiente:\n\n* Estableció durante los primeros treinta años del siglo XX las bases del sistema educativo del país, ratificando lo expuesto en la Constitución de 1886, en el Concordato de 1887 y en la Ley general de educación de 1892.\n* Dividió la enseñanza oficial en primaria, secundaria, industrial, profesional y artística.\n* Estipuló que la educación pública en el país debía estar regida por los cánones de la religión católica.\n* Determinó que la educación primaria debía ser gratuita pero no obligatoria (posteriormente, la ley 56 de 1927 la convirtió en obligatoria).\n* Entre sus rasgos más importantes se encuentran la gran influencia de la iglesia católica en la enseñanza, la distribución de las responsabilidades financieras y administrativas entre la Nación, los departamentos y los municipios, la división rural-urbana de la educación primaria (favoreciendo a la urbana), y la división entre educación secundaria técnica y clásica.",
+      "respuesta": "Basado en el documento *la-educacion-primaria-y-secundaria-en-colombia-en-el-siglo-xx-articulo-maria-teresa-ramirez-y-juana-patricia-tellez-c.pdf*, la Ley 39 de 1903 estableció lo siguiente para el sistema educativo colombiano:\n\n* Sentó las bases del sistema educativo del país durante los primeros treinta años del siglo XX, ratificando lo expuesto en la Constitución de 1886, en el Concordato de 1887 y en la Ley general de educación de 1892.\n* Dividió la enseñanza oficial en primaria, secundaria, industrial, profesional y artística.\n* Estipuló que la educación pública en el país debía estar regida por los cánones de la religión católica.\n* Determinó que la educación primaria debía ser gratuita pero no obligatoria (posteriormente convertida en obligatoria mediante la Ley 56 de 1927).\n* Estableció la descentralización administrativa del sistema escolar, asignando a los departamentos la financiación, el pago de maestros, la dirección, la protección y la supervisión de la educación primaria, y ordenando a los municipios suministrar los locales y enseres para el funcionamiento de las escuelas urbanas y rurales.\n* Generó rasgos determinantes como la gran influencia de la Iglesia católica en la enseñanza, la distribución de responsabilidades financieras y administrativas entre la Nación, los departamentos y los municipios, la división rural-urbana de la educación primaria (favoreciendo a la urbana), y la división técnica versus clásica de la educación secundaria orientada hacia el desarrollo de la industria y, en menor medida, de la agricultura.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde de manera detallada y completa a la pregunta, y todas sus afirmaciones están estrictamente respaldadas por la información del contexto.",
+      "justificacion": "La respuesta responde de forma exhaustiva a la pregunta y todas las afirmaciones presentadas están estrictamente respaldadas por la información del contexto.",
       "abstencion_correcta": true,
       "clave": "edu-01:ee80f079c850"
     },
@@ -427,11 +427,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en los textos proporcionados, la dote y su papel en el matrimonio se describen de la siguiente manera:\n\n* **Qué era la dote:** \n  * Era una garantía o porción de los derechos sucesorios (herencia patrimonial) que los padres o familiares le entregaban al esposo de la hija al momento de convenir el matrimonio. Podía ser \"profeticia\" (procedente del padre o abuelo), \"adventicia\" (procedente de la madre, abuela o pariente de línea transversal o extraño), o una donación *propter nupcias*. Su valor reflejaba el tamaño de la fortuna familiar y su contenido traducía el hacer económico de quienes la otorgaban (por ejemplo, en la Villa del Socorro incluyó ganado y esclavos). Aunque el esposo era el receptor y administrador de los bienes, no podía disponer de su venta (*las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf*).\n  * Según otra cita del mismo documento (citando a Clara López Beltrán), la dote era el medio para que las mujeres recibieran una parte de su herencia al casarse (*las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf*).\n\n* **Qué papel cumplía:**\n  * Servía para fortalecer económicamente a la nueva unidad familiar o añadir capital a un patrimonio mayor.\n  * Era importante para conseguir maridos respetables.\n  * Le ofrecía a la esposa una participación económica en el contrato matrimonial y una plataforma de seguridad por si quedaba sola, viuda, abandonada o divorciada.\n  * Su valor era directamente proporcional al estatus y a la capacidad económica del futuro esposo.\n  *(Fuente para estos puntos: las-mujeres-en-la-historia-de-colombia-sus-derechos-sus-deberes-articulo-jacqueline-blanco-blanco-y-margarita-cardenas-poveda.pdf)*",
+      "respuesta": "Basándose en el contexto proporcionado:\n\n*   **¿Qué era la dote?** Era una garantía o parte de los derechos sucesorios y de la herencia patrimonial que los padres (o familiares) le entregaban a la hija al momento de contraer matrimonio. El esposo era el receptor, tenedor y administrador de los bienes contenidos en ella, pero no podía disponer de su venta. Su valor era directamente proporcional a la capacidad económica y el estatus de la familia, pudiendo incluir bienes como ganado y esclavos (según la actividad económica de la región). Su monto fue regulado en 1805 en la Novísima Recopilación y también fue objeto de disposiciones en las Leyes de Toro. *(Información proveniente de los fragmentos del artículo \"Las mujeres en la historia de Colombia sus derechos sus deberes\", de Jacqueline Blanco Blanco y Margarita Cárdenas Poveda).*\n*   **¿Qué papel cumplía en el matrimonio?** \n    *   Servía para fortalecer económicamente a la nueva unidad familiar y añadía capital a un patrimonio mayor. \n    *   Ofrecía a la mujer una participación económica en el contrato matrimonial y una plataforma de seguridad en caso de quedar sola, viuda, abandonada o divorciada.\n    *   Su valor reflejaba el tamaño de la fortuna familiar y, en muchos casos, determinaba las posibilidades de conseguir un buen contrato matrimonial o un marido respetable (ya que en las ciudades americanas del siglo XVII el número de varones era inferior al de las mujeres).\n    *(Información proveniente de las notas al pie y fragmentos del artículo \"Las mujeres en la historia de Colombia sus derechos sus deberes\", de Jacqueline Blanco Blanco y Margarita Cárdenas Poveda, citando a su vez obras de Clara López Beltrán).*",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde plenamente a qué era la dote y qué papel desempeñaba en el matrimonio, y todas sus afirmaciones factuales se encuentran respaldadas textualmente por el contexto.",
+      "justificacion": "La respuesta responde de manera completa a ambas partes de la pregunta y todas las afirmaciones factuales están plenamente respaldadas por los fragmentos del texto.",
       "abstencion_correcta": true,
       "clave": "muj-01:defde086dec1"
     },
@@ -471,11 +471,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el contexto proporcionado (*los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-catalina-cartagena.pdf*), la Comisión Investigadora de las Causas Actuales de la Violencia fue una comisión encargada por la Junta Militar y creada por el Decreto 0942 de 1958. Además, es considerada como la precursora remota del libro fundador escrito por Germán Guzmán, Fals Borda y Eduardo Umaña Luna en 1962.",
+      "respuesta": "Con base en el contexto proporcionado (*los-estudios-de-la-violencia-en-colombia-antes-de-la-violentologia-articulo-catalina-catalina-cartagena.pdf*), la Comisión Investigadora de las Causas Actuales de la Violencia fue encargada por la Junta Militar y creada por el Decreto 0942 de 1958. Además, es considerada como la precursora remota del libro fundador escrito por Germán Guzmán, Fals Borda y Eduardo Umaña Luna en 1962.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde de forma completa a la pregunta según la información disponible y todas sus afirmaciones están estrictamente respaldadas por el contexto proporcionado.",
+      "justificacion": "La respuesta responde de forma completa a la pregunta utilizando toda la información relevante disponible en el texto, y todas sus afirmaciones son completamente fieles al contexto.",
       "abstencion_correcta": true,
       "clave": "vio-01:e0735d082102"
     },
@@ -515,11 +515,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basado en el documento proveniente del archivo `memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf`, entre 2008 y 2011 el Grupo de Memoria Histórica (GMH) reconstruyó la memoria de los siguientes casos emblemáticos:\n\n* Trujillo –Valle– (2008)\n* El Salado –Bolívar– (2009)\n* La Rochela –Santander– (2010)\n* Bojayá –Chocó– (2010)\n* Bahía Portete –Guajira– (2010)\n* Carare –Santander– (2011)\n* Remedios y Segovia –Antioquia– (2011)\n* San Carlos –Antioquia– (2011)\n* Comuna 13 –Medellín– (2011)\n* El Tigre –Putumayo– (2011)",
+      "respuesta": "Según el documento proveniente del archivo *memoria-y-violencia-politica-en-colombia-articulo-jorge-andres-cancimance-lopez.pdf*, entre 2008 y 2011 el Grupo de Memoria Histórica (GMH) entregó sus primeros informes reconstruyendo la memoria de los siguientes casos emblemáticos:\n\n* Trujillo –Valle– (2008)\n* El Salado –Bolívar– (2009)\n* La Rochela –Santander– (2010)\n* Bojayá –Chocó– (2010)\n* Bahía Portete –Guajira– (2010)\n* Carare -Santander- (2011)\n* Remedios y Segovia –Antioquia- (2011)\n* San Carlos –Antioquia- (2011)\n* Comuna 13 –Medellín- (2011)\n* El Tigre –Putumayo- (2011)",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta lista con exactitud y exhaustividad todos los casos emblemáticos mencionados en el contexto para el periodo 2008-2011, sin añadir información externa.",
+      "justificacion": "La respuesta lista detalladamente y de forma fiel todos los casos emblemáticos mencionados en el texto para el periodo 2008-2011.",
       "abstencion_correcta": true,
       "clave": "mem-01:c9b79c05dd42"
     },
@@ -559,11 +559,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basándome en el contexto proporcionado del libro *memorias-de-un-abanderado-jose-maria-espinosa.pdf*, se mencionan los siguientes eventos y vivencias de José María Espinosa relacionados con la campaña y los movimientos de las tropas:\n\n* **Lealtad al general Nariño:** Espinosa relata que no quería abandonar al general Nariño. Cuando fueron perseguidos y Nariño le ordenó que se salvara mientras él se internaba en el bosque, Espinosa decidió marchar rápidamente por su cuenta para evitar que un grupo de dos personas fuera más fácil de descubrir por el enemigo (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Captura de otros y su propia huida:** Tras separarse de Nariño, los que iban con él fueron alcanzados y cayeron prisioneros, excepto el alférez Martín Correa y el propio Espinosa, quien destaca que tenían buenas piernas y sabían trepar por los riscos y breñas como un ágil pastuso (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Testigo de las acciones y el arrojo de Nariño:** Espinosa estuvo presente como testigo ocular de varias situaciones de peligro e intrepidez del general Nariño, como cuando a Cerca de El Calvario se le murió el caballo de un balazo y tuvo que defenderse de los soldados de caballería enemigos usando sus pistolas hasta la llegada del capitán Joaquín París (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Llegada a Cali:** Tras la campaña y las marchas, Espinosa describe la alegría de llegar con los sobrevivientes a los alrededores de Cali, aunque lamentando la pérdida de compañeros y la incertidumbre sobre la suerte del general Nariño (fuente: *memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n\n*Nota sobre el río Juanambú:* El contexto proporcionado menciona que el general Nariño hizo reconocer los pasos del río para vadearlo o colocar una tarabita (mencionando que se intentó por el punto llamado el Tablón de los Gómez), pero **el fragmento provisto no contiene información específica sobre cómo vivió Espinosa el paso exacto de dicho río**, por lo que no es posible detallar esa vivencia específica basándose únicamente en el texto entregado.",
+      "respuesta": "Basándome en el contexto proporcionado del libro *memorias-de-un-abanderado-jose-maria-espinosa.pdf*, se mencionan varios momentos y vivencias de José María Espinosa relacionados con el general Nariño y los acontecimientos de la campaña:\n\n* **Lealtad hacia el general Nariño:** Espinosa relata que no quería abandonar al general cuando este le dijo que se salvase y que lo aguardaría en la montaña, aunque finalmente se separó de él para evitar que el enemigo descubriera a un grupo de dos personas en lugar de a una sola (*memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Captura y escape:** Tras separarse de Nariño, menciona que varios de los que iban con él cayeron prisioneros, pero él logró salvarse junto con el alférez Martín Correa porque tenían \"buenas piernas\" y sabían trepar por riscos y breñas (*memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **Testigo del arrojo de Nariño:** Espinosa afirma haber sido testigo ocular de cómo el general Nariño demostró su arrojo cerca de El Calvario, cuando se le murió el caballo de un balazo, quedó atrapado con los agresores cargando contra él y logró dispararles sus pistolas simultáneamente antes de la llegada del capitán Joaquín París (*memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n* **La intrepidez de Nariño en combate:** También describe la intrepidez del general en los ataques nocturnos, llegando a olvidar su propio peligro para pensar en el de Nariño, cuya suerte ignoraban posteriormente tras las retiradas y combates (*memorias-de-un-abanderado-jose-maria-espinosa.pdf*).\n\nEl contexto proporcionado **no contiene** información detallada sobre el paso específico del río Juanambú (solo menciona que el general Nariño hizo reconocer los pasos del río y colocar una tarabita, pero no profundiza en cómo Espinosa vivió este hecho en particular).",
       "cobertura": "parcial",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta aborda detalladamente las vivencias de Espinosa durante la campaña descritas en el contexto y declara de manera explícita que la información provista es insuficiente para detallar cómo vivió el paso del río Juanambú.",
+      "justificacion": "La respuesta aborda las vivencias de Espinosa durante la campaña reflejadas en el texto y aclara de forma explícita que el contexto no contiene detalles suficientes sobre el paso del río Juanambú. Todas las afirmaciones realizadas son fieles a los fragmentos proporcionados.",
       "abstencion_correcta": true,
       "clave": "ind-01:5205183afe6c"
     },
@@ -605,11 +605,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basado en el contexto proporcionado, el nacimiento y la formación de los partidos Liberal y Conservador en Colombia ocurrieron de la siguiente manera:\n\n* **Origen y nombres previos:** \n  * Según el libro *Historia de los partidos políticos en Colombia* (de Germán Lozano Villegas), las personas que ocuparon cargos públicos durante el mandato de Pedro Alcántara Herrán eran seguidores de Bolívar y empezaron a ser llamados \"ministeriales\" o \"partido ministerial\", un partido en forma embrionaria que en **1848** adoptaría el nombre de **Partido Conservador**. Sus oponentes, que habían sido llamados \"progresistas\", volvieron a denominarse **liberales** en **1849**. Con esto habían nacido los dos partidos tradicionales del país.\n  * Por su parte, el libro *Historia mínima de Colombia* (de Jorge Orlando Melo) señala que en mayo de **1848**, Mariano Ospina Rodríguez y José Eusebio Caro consideraron conveniente fundar un **partido conservador** para defender a la sociedad contra las doctrinas inmorales y anárquicas, temiendo la marcha del liberalismo hacia posiciones más radicales y a los conservadores tibios. En el conservatismo inicial (que ejerció el poder entre 1837 y 1851) se unieron antiguos bolivarianos, enemigos de la dictadura defensores del orden tradicional y políticos moderados.\n  * El libro *Historia concisa de Colombia (1810-2013)* (de Michael J. LaRosa y Germán R. Mejía) sitúa la definición de ambos partidos políticos (Liberal y Conservador) en el año **1848**.\n\n* **Evolución y características:**\n  Según *Historia de los partidos políticos en Colombia* (de Germán Lozano Villegas), los partidos evolucionaron como organizaciones formales a partir de la segunda mitad del siglo XIX, eran multiclasistas, cubrían todo el territorio nacional y contaban con el clero como apoyo político en el caso del partido conservador. Durante el resto del siglo, la gran diferencia entre ambas colectividades estuvo relacionada con la situación legal de la iglesia.",
+      "respuesta": "Basándonos en los textos proporcionados, los partidos Liberal y Conservador en Colombia nacieron y evolucionaron de la siguiente manera:\n\n* **Orígenes y formación:** \n  * Según el libro *Historia de los partidos políticos en Colombia* (Germán Lozano Villegas), durante el mandato de Herrán, los seguidores de Bolívar ocuparon cargos públicos y empezaron a ser llamados \"ministeriales\" o \"partido ministerial\", constituyendo un partido en forma embrionaria que **en 1848** adoptaría el nombre de **Partido Conservador**. Por su parte, sus oponentes, que habían sido llamados progresistas, volvieron a denominarse **liberales en el año de 1849**. Con esto, para todos los efectos, habían nacido los dos partidos tradicionales.\n  * El libro *Historia mínima de Colombia* (Jorge Orlando Melo) señala que ya en **mayo de 1848** Mariano Ospina Rodríguez y José Eusebio Caro consideraron conveniente **fundar un partido conservador** para defender la sociedad contra las doctrinas inmorales y anárquicas, temiendo la marcha del liberalismo hacia posiciones más radicales y a los conservadores tibios. En el conservatismo inicial (que ejerció el poder entre 1837 y 1851) se unieron antiguos bolivarianos, enemigos de la dictadura convertidos en defensores del orden tradicional y políticos moderados. \n  * El libro *Historia concisa de Colombia 1810-2013* (Michael J. LaRosa y Germán R. Mejía) sitúa la definición de ambos partidos políticos en el año **1848**.\n  * Finalmente, el libro *Carlos Pizarro Leongómez: de guerrillero a candidato presidencial* menciona que los permanentes enfrentamientos y una concepción centralista dieron lugar al **nacimiento de los partidos conservador y liberal**.\n\n* **Cómo eran (caracterización):**\n  * Según *Historia de los partidos políticos en Colombia* (Germán Lozano Villegas), como organizaciones formales **evolucionaron a partir de la segunda mitad del siglo XIX**, eran multiclasistas, cubrían todo el territorio nacional y contaron con el clero como apoyo político (siendo la situación legal de la iglesia la gran diferencia entre ambas colectividades durante el resto del siglo).\n  * Según *Historia mínima de Colombia* (Jorge Orlando Melo), en ambos partidos había comerciantes importantes, terratenientes, abogados y letrados. Las familias de mayor prestigio colonial se inclinaban más hacia el conservatismo (aunque a veces sus hijos se volvían liberales) y los sacerdotes eran por lo general conservadores, aunque también había curas y obispos que simpatizaban con los liberales. Las rivalidades locales y las guerras civiles del siglo XIX ayudaron a vincular los partidos con los sitios de nacimiento y la solidaridad local.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde de manera completa a las preguntas sobre el cuándo y el cómo a partir de los textos provistos, y todas las afirmaciones presentadas están estrictamente respaldadas por los fragmentos del contexto.",
+      "justificacion": "La respuesta responde plenamente cuándo y cómo surgieron los partidos Liberal y Conservador basándose en las distintas fuentes, y todas las afirmaciones factuales están respaldadas directamente por los fragmentos provistos.",
       "abstencion_correcta": true,
       "clave": "pol-01:0a32c133681c"
     },
@@ -651,11 +651,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basado en los textos proporcionados, la leyenda negra se describe de la siguiente manera:\n\n* Según el libro *historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf*, se trata de la leyenda de la \"sangrienta España\" que denuncia los horrores, la crueldad, los criminales excesos y los crímenes de la Conquista y la colonización española. Fue iniciada por la indignación cristiana del sacerdote español fray Bartolomé de Las Casas (autor de *Brevísima relación de la destrucción de las Indias*) y propagada en primer lugar por ingleses y franceses que estaban celosos del poderío español.\n* Según el libro *la-conquista-de-america-pablo-huerga-melcon.pdf*, la leyenda negra sostiene que los españoles eran una banda de desgraciados que, ávidos de oro y riqueza, entraron en América destruyéndolo todo, matando a la mayor cantidad de personas posible, esclavizando a los indígenas y subyugándolos colonialmente durante 300 años, sin que hubiera nada positivo o digno de interés en dicha acción.\n* Según el libro *la-conquista-y-colonizacion-espanola-de-america-d-benedicto-cuervo-alvarez.pdf*, algunos autores como Ricardo García Cárcel la consideran un concepto \"conspiranoico\" o una estrategia de \"mal perdedor\" que busca justificar o colorear de un modo más amable la historia de España, presentándola como una invención deliberada producto de la hostilidad de los ajenos o la traición de los propios.",
+      "respuesta": "Con base en los textos proporcionados, la llamada \"leyenda negra\" de España se describe de la siguiente manera:\n\n* Según el libro *historia-de-colombia-y-sus-oligarquias-1498---2017---capitulo-i-biblioteca-nacional-de-colombia.pdf*, la \"leyenda negra\" de la sangrienta España hace referencia a la denuncia de los horrores de la Conquista y la colonización española (como las pestes y las inhumanas condiciones de trabajo). Fue iniciada por la indignación cristiana del sacerdote español fray Bartolomé de Las Casas —quien denunció estos excesos en su obra *Brevísima relación de la destrucción de las Indias* y otros escritos— y fue propagada en primer lugar por los ingleses y franceses debido a sus celos del poderío español.\n* Según el libro *la-conquista-de-america-pablo-huerga-melcon.pdf*, en el marco del pensamiento único, la leyenda negra consiste en la idea de que los españoles eran «una banda de desgraciados que ávidos de oro y riqueza entraron en América y destruyeron todo, mataron a todos los que pudieron [...] y esclavizaron a los indios y subyugaron colonialmente durante 300 años», sin que hubiera en ello nada positivo ni digno de interés.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta aborda en su totalidad la definición de la leyenda negra integrando fielmente los distintos puntos de vista y detalles presentes en los textos del contexto.",
+      "justificacion": "La respuesta responde de forma completa a la pregunta definiendo la leyenda negra a partir de los textos provistos, y todas sus afirmaciones se sustentan fielmente en el contexto.",
       "abstencion_correcta": true,
       "clave": "con-01:ccaa2878be53"
     },
@@ -695,11 +695,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Según el contexto proporcionado, los pueblos nahuas no dejaron perecer el recuerdo ni su propia visión del trágico acontecimiento de la Conquista y la ruina final de su metrópoli, México-Tenochtitlan. Conservaron este recuerdo a través de relaciones y pinturas donde expresaron su propia visión de Cortés, los españoles y la Conquista. \n\nEsta información proviene del libro **[la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf]**.",
-      "cobertura": "completa",
+      "respuesta": "Según el contexto proporcionado, los nahuas no dejaron perecer el recuerdo ni su propia visión del trágico acontecimiento de la Conquista y la ruina final de su metrópoli, México-Tenochtitlan, a través de textos y pinturas que ofrecen las varias imágenes que se formaron acerca de Cortés y los españoles. Esto se menciona en el libro *[la-conquista-violencia-y-dominacion-universitat-de-valencia.pdf]*. \n\nPor otro lado, el contexto no detalla los relatos específicos o pormenores de cómo narraron dicha caída más allá de indicar que conservaron la memoria de este acontecimiento a través de relaciones y pinturas.",
+      "cobertura": "parcial",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde a la pregunta indicando cómo conservaron y transmitieron su testimonio (a través de relaciones y pinturas), y todas sus afirmaciones se derivan fielmente del contexto.",
+      "justificacion": "La respuesta responde de forma fidedigna con la información disponible en el texto (que lo relataron mediante textos y pinturas) y advierte con precisión que el contexto no contiene detalles específicos sobre el contenido de dichos relatos.",
       "abstencion_correcta": true,
       "clave": "con-02:6a7667a78028"
     },
@@ -740,11 +740,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en los textos proporcionados, la querella de las investiduras consistió en:\n\n* Según el libro **10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf**, fue la protesta del papado ante el abuso de los emperadores quienes, usurpando atribuciones pontificias, pretendían conferir la autoridad religiosa junto con la civil a los obispos y abades del Imperio. El conflicto comenzó cuando el emperador Enrique IV no quiso aceptar la reforma de la Santa Sede promulgada por el papa Gregorio VII en el sínodo de Lenten (1075) en contra de las \"investiduras laicas\" (la práctica en la que un rey entregaba el báculo y el anillo pastoral a un arzobispo recién nombrado). Esto llevó a que el emperador convocara un concilio en Worms para destituir al papa, lo que desencadenó enfrentamientos, excomuniones y consecuencias a largo plazo como el debilitamiento del dominio del emperador sobre la Iglesia y el aumento de la preeminencia de los príncipes alemanes.\n* Según el libro **historia-universal-i-virginia-aguirre-arvizu-maria-de-lourdes-arroyo-pena-dionisio-rodriguez-cabrera-y-sonia-torres-gonzalez-14094.pdf**, los conflictos entre el poder civil y el clero (conocidos como la Querella de las Investiduras) sobrevinieron porque los mandatorios civiles designaban a los funcionarios religiosos y los reyes protestaron contra la obra reformista del papa Gregorio VII (quien prohibió la simonía e instituyó el celibato). Acatar la decisión del papa significaba para los reyes abandonar en manos de la Iglesia las tierras pertenecientes a obispos y abadías, ya que los obispos eran sus vasallos y disponían de una parte de su feudo.",
+      "respuesta": "Basado en el contexto proporcionado, la querella de las investiduras consistió en la protesta y el conflicto del papado ante el abuso de los emperadores, quienes —usurpando atribuciones pontificias— pretendían conferir la autoridad religiosa junto con la civil a los obispos y abades del Imperio (práctica que incluía la entrega de feudos episcopales y nombramientos religiosos por parte de los mandatarios civiles). \n\nEsta información proviene de los siguientes libros:\n* **`10.-Manual-de-historia-medieval-siglos-III-a-XV-autor-Gerardo-Fabi-n-Rodr-guez-y-Jorge-Rigueiro.pdf`**\n* **`historia-universal-i-virginia-aguirre-arvizu-maria-de-lourdes-arroyo-pena-dionisio-rodriguez-cabrera-y-sonia-torres-gonzalez-14094.pdf`**",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta define y explica con precisión qué fue la querella de las investiduras basándose estrictamente y en su totalidad en los textos provistos.",
+      "justificacion": "La respuesta define con precisión qué fue la querella de las investiduras y todas sus afirmaciones se sustentan textualmente en el contexto provisto.",
       "abstencion_correcta": true,
       "clave": "med-01:e1afbcd02471"
     },
@@ -784,11 +784,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Basándose en el libro *Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf*, lo que tuvieron en común las políticas económicas aplicadas por Carlos Menem, Carlos Andrés Pérez y Alberto Fujimori en los años noventa fue lo siguiente:\n\n1. **Fueron políticas neoliberales** (según se detalla en el contexto del mismo libro al explicar la aplicación de estas medidas en la región).\n2. **Ninguno de estos gobiernos dio a conocer a la población el contenido real de las políticas** que aplicarían antes de ser elegidos. Por el contrario, en sus plataformas electorales prometieron exactamente lo opuesto a las medidas económicas que terminaron implementando durante la década de 1990.",
+      "respuesta": "Según el libro *Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf*, lo que tuvieron en común las políticas económicas aplicadas por Carlos Menem en Argentina, Carlos Andrés Pérez en Venezuela (durante su segunda presidencia) y Alberto Fujimori en Perú en la década de 1990 fue lo siguiente:\n\n* Ninguno de estos gobiernos hizo conocer a la población el contenido de las políticas que aplicarían antes de ser elegidos.\n* En sus plataformas electorales, prometieron exactamente lo opuesto a las medidas económicas que terminaron implementando.\n* Implementaron políticas neoliberales.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta contesta exhaustivamente la pregunta utilizando los puntos comunes detallados en el texto y todas sus afirmaciones son completamente fieles a las fuentes provistas.",
+      "justificacion": "La respuesta responde de forma completa a la pregunta y todas las afirmaciones presentadas están respaldadas textualmente por el contexto recuperado.",
       "abstencion_correcta": true,
       "clave": "al-01:6bb0c51a718b"
     },
@@ -828,11 +828,11 @@
       "hit_crudo": true,
       "hit_filtrado": true,
       "abstencion_por_umbral": false,
-      "respuesta": "Con base en el contexto proporcionado del libro *etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf*, el presidente venezolano Carlos Andrés Pérez firmó leyes en agosto de 1975 y enero de 1976 que **establecieron el control estatal sobre el petróleo**.",
+      "respuesta": "Con base en el contexto proporcionado, el presidente venezolano Carlos Andrés Pérez firmó leyes en agosto de 1975 y enero de 1976 que **establecieron el control estatal sobre el petróleo**. \n\nEsta información proviene del libro *etapas-y-procesos-en-la-historia-de-america-latina-sergio-guerra-vilaboy-3398.pdf*.",
       "cobertura": "completa",
       "se_abstiene": false,
       "es_fiel": true,
-      "justificacion": "La respuesta responde de manera precisa y completa a la pregunta basándose estrictamente en los datos que proporciona el contexto.",
+      "justificacion": "La respuesta responde de forma directa y completa a la pregunta según la información disponible en el texto, y todas sus afirmaciones están totalmente respaldadas por el contexto provisto.",
       "abstencion_correcta": true,
       "clave": "al-02:892b3cf795b2"
     },
@@ -1015,6 +1015,10 @@
           "distancia": 0.704
         },
         {
+          "libro": "historia-minima-de-colombia-jorge-orlando-melo-15465.pdf",
+          "distancia": 0.7271
+        },
+        {
           "libro": "Historia-Mundial-Contempor-nea-Ministerio-de-Educaci-n-Argentina.pdf",
           "distancia": 0.7308
         },
@@ -1029,10 +1033,6 @@
         {
           "libro": "historia-de-los-procesos-sociales-y-politicos-de-america-latina-autores-varios-et-al-3399.pdf",
           "distancia": 0.7435
-        },
-        {
-          "libro": "historia-universal-cronologia-basica-historiaunida-14098.pdf",
-          "distancia": 0.745
         }
       ],
       "hit_crudo": null,
@@ -1126,7 +1126,7 @@
       "cobertura": "abstencion",
       "se_abstiene": true,
       "es_fiel": null,
-      "justificacion": "El contexto no contiene información sobre el gobierno de Iván Duque ni el periodo 2018-2022, por lo que el sistema se abstiene de manera justificada.",
+      "justificacion": "El sistema se abstiene correctamente de responder debido a que el contexto no contiene información sobre el gobierno de Iván Duque.",
       "abstencion_correcta": true,
       "clave": "neg-cerca-07:983e6e7878f5"
     },
@@ -1145,20 +1145,20 @@
           "distancia": 0.7576
         },
         {
+          "libro": "una-vision-critica-de-la-conquista-de-america-bernardo-veksler.pdf",
+          "distancia": 0.7712
+        },
+        {
+          "libro": "una-vision-critica-de-la-conquista-de-america-bernardo-veksler.pdf",
+          "distancia": 0.7765
+        },
+        {
           "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
           "distancia": 0.7805
         },
         {
-          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
-          "distancia": 0.7883
-        },
-        {
-          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
-          "distancia": 0.7893
-        },
-        {
-          "libro": "memorias-de-un-abanderado-jose-maria-espinosa.pdf",
-          "distancia": 0.7973
+          "libro": "una-vision-critica-de-la-conquista-de-america-bernardo-veksler.pdf",
+          "distancia": 0.7817
         }
       ],
       "hit_crudo": null,

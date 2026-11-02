@@ -6,6 +6,7 @@ from google.genai import types
 import chromadb
 import os
 from fastapi.staticfiles import StaticFiles
+from normalizacion import normalizar_texto
 
 load_dotenv()
 historial: list[types.Content] = []
@@ -37,7 +38,7 @@ def recuperar(pregunta: str, n_resultados: int = 6) -> list[dict]:
     )
 
     return [
-        {"texto": doc, "libro": meta["libro"], "distancia": dist}
+        {"texto": normalizar_texto(doc), "libro": meta["libro"], "distancia": dist}
         for doc, meta, dist in zip(
             resultados["documents"][0],
             resultados["metadatas"][0],
