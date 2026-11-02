@@ -36,6 +36,8 @@ Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval
 - **PDF extraction broke a fact that was actually in the corpus (`emp-01`).** Coltejer's founding date appears in Carlos Dávila's book, but pypdf extracted it as `1 9 0 7`. The system couldn't find it and answered that it didn't have the information. This is a data-quality problem in ingestion, not a model or threshold problem, and it only surfaced through evaluation.
 - **The threshold works with a narrow margin, and the prompt acts as a second layer.** The farthest answerable question landed at distance 0.587 and the closest negative at 0.605. That negative (about Iván Duque's presidency) passed the threshold with all 6 chunks and was refused by the LLM, following the instruction to say when the context doesn't contain the answer. The threshold filtered out the other 11 negatives. The threshold was not retuned on these results, to avoid contaminating the evaluation.
 - **Honest partial answers (`ind-01`).** When the context covers only part of the question, the model answers what it can and states explicitly what's missing, instead of filling the gap with its own knowledge.
+- **Garbled PDF extraction (`emp-01`).** One book (Dávila) has letters and digits spaced out by extraction (`1 9 0 7`). Added `normalizacion.py` (13 tests), applied to retrieved text before it reaches the LLM. It did not fix `emp-01`: the chunk with Coltejer's founding date ranked 7th (distance 0.6385 vs. 0.633 for 6th), so it never reached the model. Re-embedded after normalization its distance drops to 0.6316 and it would make the top 6. On a second heavily spaced chunk the distance rose (+0.024), with a short, low-information question. The evidence (n=2) does not yet justify re-embedding the book's 2,593 chunks (see `eval/experimento_normalizacion.py`).
+- Between runs, `par-01` became faithful and `con-02` became partial with no change to their chunks: this is LLM variance, not an effect of normalization.
 
 ### Limitations
 
@@ -43,6 +45,7 @@ Evaluated with a hand-written set of 30 questions ([`eval/preguntas.jsonl`](eval
 - **Small sample.** With 18 answerable questions, each one is worth about 5.5 percentage points. That's why results are shown as n/total.
 - **Questions are probably easy for the retriever.** The answerable questions were written from the books' text and share vocabulary with it, which favors the 18/18 Hit@6. Paraphrased questions are still missing.
 - **The judge may be lenient.** Manual review found cases where the judge accepted mild inferences by the model as faithful, so the faithfulness metric is probably optimistic.
+- Hit@k is measured per book, not per chunk: in `emp-01` three chunks from the right book were retrieved, but not the one containing the answer.
 
 ---
 
@@ -205,7 +208,7 @@ curl -X POST http://127.0.0.1:8000/chat \
 - [ ] Per-chunk language detection/filtering
 - [x] Minimal web interface (HTML/CSS/JS served by FastAPI)
 - [x] Formal evaluation of retrieval, refusal and faithfulness
-- [ ] Improve PDF extraction (digits split by spaces, like `1 9 0 7`)
+- [ ] Re-embed the Dávila book with normalized text
 - [x] Remove a book indexed twice (`historia-universal-contemporanea-...-14097 (1).pdf`)
 - [ ] Repeat the evaluation several times and report the range, not a single run
 - [ ] Extend the evaluation set with paraphrased questions

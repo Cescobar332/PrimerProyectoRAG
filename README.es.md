@@ -19,9 +19,16 @@ Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](
 | Recuperación: libro correcto en top-k | Hit@6 antes del umbral | 18/18 (100.0%) |
 | Recuperación tras umbral | Hit@6 después del umbral (0.65) | 18/18 (100.0%) |
 | Responde lo que el corpus cubre | Preguntas respondibles no rechazadas | 17/18 (94.4%) |
-| Responde por completo | Preguntas respondibles con respuesta completa (no parcial) | 16/18 (88.9%) |
+| Responde por completo | Preguntas respondibles con respuesta completa (no parcial) | 15/18 (83.3%) |
 | Rechaza lo que el corpus no cubre | Preguntas fuera del corpus con abstención | 12/12 (100.0%) |
-| Fidelidad al contexto | Respuestas sin afirmaciones fuera del contexto (juez: gemini-flash-latest) | 16/17 (94.1%) |
+| Fidelidad al contexto | Respuestas sin afirmaciones fuera del contexto (juez: gemini-flash-latest) | 17/17 (100.0%) |
+
+**Casos fallidos:**
+
+- `emp-01` (distancia top-1: 0.5633): se abstuvo teniendo información
+- `ind-01` (distancia top-1: 0.4803): respuesta parcial
+- `con-02` (distancia top-1: 0.5594): respuesta parcial
+
 
 ### ¿Cómo se midió?
 
@@ -36,6 +43,8 @@ Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](
 - **La extracción del PDF rompió un dato que sí estaba en el corpus (`emp-01`).** La fecha de fundación de Coltejer aparece en el libro de Carlos Dávila, pero pypdf la extrajo como `1 9 0 7`. El sistema no la encontró y respondió que no tenía la información. Es un problema de calidad de datos en la ingesta, no del modelo ni del umbral, y solo apareció al evaluar.
 - **El umbral funciona con poco margen, y el prompt actúa como segunda capa.** La pregunta respondible con mayor distancia quedó en 0.587 y la negativa más cercana en 0.605. Esa negativa (sobre el gobierno de Iván Duque) pasó el umbral con sus 6 fragmentos y la rechazó el LLM, siguiendo la instrucción de decir cuando el contexto no contiene la respuesta. Las otras 11 negativas las descartó el umbral. El umbral no se reajustó con estos resultados, para no contaminar la evaluación.
 - **Respuestas parciales honestas (`ind-01`).** Cuando el contexto cubre solo una parte de la pregunta, el modelo responde lo que tiene y dice explícitamente qué le falta, en vez de completar con conocimiento propio.
+- **Texto mal extraído del PDF (`emp-01`).** Un libro (Dávila) tiene letras y números espaciados por la extracción (`1 9 0 7`). Se añadió `normalizacion.py` (13 tests) y se aplica al texto recuperado antes de pasarlo al LLM. No corrigió `emp-01`: el fragmento con la fecha de fundación de Coltejer quedaba en el puesto 7 (distancia 0.6385 frente a 0.633 del sexto), así que nunca llegó al modelo. Re-embebido normalizado, su distancia baja a 0.6316 y entraría al top-6. En un segundo fragmento muy espaciado la distancia subió (+0.024), con una pregunta corta poco informativa. La evidencia (n=2) no justifica aún re-embeber las 2.593 partes del libro (ver `eval/experimento_normalizacion.py`).
+- Entre corridas, `par-01` pasó a ser fiel y `con-02` pasó a respuesta parcial sin cambios en sus fragmentos: es variación del LLM, no efecto de la normalización.
 
 ### Limitaciones
 
@@ -43,6 +52,7 @@ Evaluado con un banco de 30 preguntas escritas a mano ([`eval/preguntas.jsonl`](
 - **Muestra pequeña.** Con 18 preguntas respondibles, cada una vale unos 5.5 puntos porcentuales. Por eso los resultados se muestran como n/total.
 - **Preguntas probablemente fáciles para el retriever.** Las respondibles se escribieron a partir del texto de los libros y comparten vocabulario con él, lo que favorece el 18/18 en Hit@6. Faltan preguntas parafraseadas.
 - **Juez posiblemente indulgente.** En la revisión manual se encontraron casos donde el juez aceptó como fieles inferencias leves del modelo, así que la métrica de fidelidad probablemente es optimista.
+- Hit@k se mide por libro, no por fragmento: en `emp-01` llegaron tres fragmentos del libro correcto, pero no el que contenía la respuesta.
 
 ---
 ## Por qué este proyecto
@@ -202,7 +212,7 @@ curl -X POST http://127.0.0.1:8000/chat \
 - [ ] Filtrado o detección de idioma por chunk
 - [x] Interfaz web mínima (HTML/CSS/JS servida por FastAPI)
 - [x] Evaluación formal de recuperación, abstención y fidelidad
-- [ ] Mejorar la extracción de PDF (dígitos separados por espacios, como `1 9 0 7`)
+- [ ] Re-embeber el libro de Dávila con texto normalizado
 - [x] Eliminar un libro indexado dos veces (`historia-universal-contemporanea-...-14097 (1).pdf`)
 - [ ] Repetir la evaluación varias veces y reportar el rango, no una sola corrida
 - [ ] Ampliar el banco de evaluación con preguntas parafraseadas
